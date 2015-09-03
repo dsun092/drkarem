@@ -214,13 +214,11 @@ a:active {
 	height:400px;
 	display:flex;
 }
-.location_map .location1{
+#map1{
 	width:50%;
-	background-color:green;
 }
-.location_map .location2{
+#map2{
 	width:50%;
-	background-color:blue;
 }
 
 .location_text{
