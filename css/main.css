@@ -5,13 +5,16 @@ html,body
 
 body{
 	color:#424242;
-	font-family: 'Roboto';
+	font-family: 'Roboto Condensed';
 }
 body>div{
 	left:0px;
 }
 a{
+	position: relative;
+	top: 0px;
 	color:#424242;
+	width:100%;
 }
 a:link{
 	text-decoration:none;
@@ -40,7 +43,6 @@ a:active {
 .top_bar .contact_info>span{
 	position: absolute;
 	top:50%;
-	height: 1em;
 }
 .top_bar .social_media_icon{
   position: relative;
@@ -57,7 +59,6 @@ a:active {
 	cursor: pointer;
 }
 
-
 .main_menu{
 	position:absolute;
 	top:40px;
@@ -65,6 +66,10 @@ a:active {
 	line-height: 155px;
 	width:100%;
 	background-color: #FFFFFF;
+	-moz-transition: height .5s, width .5s,font-size .5s, left 1s ease;
+    -webkit-transition: height .5s, width .5s, font-size .5s, left 1s ease;
+    -o-transition: height .5s, width .5s, font-size .5s, left 1s ease;
+    transition: height .5s, width .5s, font-size .5s, left 1s ease;
 }
 
 .main_menu .main_logo{
@@ -73,6 +78,7 @@ a:active {
 	width:420px;
 	display:inline-block;
 }
+
 .main_menu .main_logo>img{
 	vertical-align:middle;
 	width:135px;
@@ -80,7 +86,6 @@ a:active {
 }
 .main_menu .main_logo>span{
 	position:absolute;
-	height:1em;
 	font-size:36px;
 }
 
@@ -91,7 +96,6 @@ a:active {
 }
 
 .main_menu .top_navi>span, .main_menu .top_navi>a{
-	height:1em;
 	font-size:18px;
 	margin-right:20px;
 	text-decoration:none;
@@ -99,6 +103,23 @@ a:active {
 .main_menu .top_navi>a:hover{
 	color:#76BD22;
 	cursor: pointer;
+}
+.fixed{
+	position:fixed;
+	top:0px;
+	z-index: 1000;
+	height:60px;
+	line-height:60px;
+}
+.fixed .main_logo{
+	left: 200px;
+}
+.fixed .main_logo>span{
+	font-size:18px;
+}
+.fixed .main_logo>img{
+	width:39px;
+	height:39px;
 }
 
 .main_slider{
@@ -135,6 +156,12 @@ a:active {
 	display:flex;
 	justify-content:space-around;
 }
+.services>a{
+	width:90%;
+	display:flex;
+	justify-content:space-around;
+}
+
 .service_column1, .service_column2, .service_column3, .service_column4{
 	width:305px;
 	position:relative;
@@ -163,7 +190,7 @@ a:active {
 	font-size:48px;
 	color: #FFFFFF;
 	position:relative;
-	top:20px;
+	top: 60px;
 }
 .our_team_desc{
 	width:50%;
@@ -171,7 +198,7 @@ a:active {
 	font-size:24px;
 	color: #FFFFFF;
 	position:relative;
-	top:50px;
+	top: 90px;
 }
 .our_team_images{
 	display:flex;
@@ -231,7 +258,7 @@ a:active {
 }
 .column{
 	position:relative;
-	top:40px;
+	top:60px;
 	width:300px;
 }
 
@@ -252,7 +279,7 @@ a:active {
 }
 .column_office{
 	position:relative;
-	top:43px;
+	top:63px;
 	width:250px;
 }
 .office_hours{
@@ -268,17 +295,17 @@ a:active {
 	position:absolute;
 	width:100%;
 	top:3770px;
-	height:500px;
+	height: 620px;
 	background-color:#76bd22;
 	text-align:center;
 }
  .contact_us_form{
  	text-align:left;
  	width:50%;
-	margin: 0 auto;
-	position:relative;
-	top:80px;
-	line-height:1.9em;
+ 	margin: 0 auto;
+ 	position:relative;
+ 	top: 120px;
+ 	line-height:1.9em;
  }
  .contact_us_form>form{
  	display:flex;
@@ -294,7 +321,7 @@ a:active {
  .footer{
  	height:150px;
  	position:absolute;
- 	top:4270px;
+ 	top: 4390px;
  	width:100%;
  }
  .footer .main_logo{
