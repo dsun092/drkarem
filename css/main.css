@@ -127,10 +127,12 @@ a:active {
 }
 
 .main_slider{
+	background-size: cover;
+	background-image: url('http://development.drkazem.divshot.io/images/doctors/hero.jpg');
+	background-repeat: no-repeat;
 	height:855px;
 	position:absolute;
 	top:195px;
-	background-color:#424242;
 	width:100%;
 }
 #sliderFrame{
@@ -208,12 +210,11 @@ a:active {
 	display:flex;
 	justify-content:space-around;
 	position:relative;
-	top:100px;
+	top:150px;
 }
 .our_team_images>img{
 	width:350px;
 	height:350px;
-	margin-right:50px;
 }
 
 .our_office{
@@ -226,6 +227,7 @@ a:active {
 	width:100%;
 	height:50%;
 	display:flex;
+	justify-content: space-around;
 }
 .our_office_row>img{
 	width:33%;
