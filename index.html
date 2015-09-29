@@ -2,7 +2,7 @@
 
 <html lang="en">
 <head>
-  <meta charset="utf-8">
+  <meta http-equiv="content-type" content="text/html; charset=utf-8" />
 
   <title>The HTML5 Herald</title>
   <meta name="description" content="The HTML5 Herald">
@@ -11,10 +11,10 @@
   <link rel="stylesheet" href="css/styles.css?v=1.0">
   <link rel="stylesheet" href="css/main.css">
   <script type="text/javascript" src="js/jquery-1.9.1.min.js"></script>
-  <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Roboto+Condensed">
+  <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Roboto+Condensed|Roboto+Thin">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
 
-  <link href="js/jsImgSlider/themes/1/js-image-slider.css" rel="stylesheet" type="text/css" />
+  <link href='https://fonts.googleapis.com/css?family=Roboto+Condensed:400,700|Roboto:100' rel='stylesheet' type='text/css'>
   <!--[if lt IE 9]>
   <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
   <![endif]-->
@@ -30,6 +30,8 @@
 		<div class="social_media_icon">
 			<i class="fa fa-facebook"></i>
 			<i class="fa fa-yelp"></i>
+			<span id="english">EN</span>
+			<span id="arabic">AR</span>
 		</div>
 	</div>
 
@@ -40,22 +42,35 @@
 		</div>
 
 		<div class="top_navi">
-			<a href="#home">HOME</a>
-			<a href="#service">SERVICES</a>
-			<a href="#team">OUR TEAM</a>
-			<a href="#gallery">GALLERY</a>
-			<a href="#testimonials">TESTIMONIALS</a>
-			<a href="#visit">VISIT</a>
+			<div><a href="#home"><span class="en">HOME</span><span class="ar">الرئيسية</span></a></div>
+			<div><a href="#service"><span class="en">SERVICES</span><span class="ar">خدماتنا</span></a></div>
+			<div><a href="#team"><span class="en">OUR TEAM</span><span class="ar">فريق العمل</span></a></div>
+			<div><a href="#gallery"><span class="en">GALLERY</span> <span class="ar">معرض الصور</span></a></div>
+			<div><a href="#testimonials"><span class="en">TESTIMONIALS</span><span class="ar">تقييم العملاء</span></a></div>
+			<div><a href="#contact_us"><span class="en">CONTACT US</span>  <span class="ar">اتصل بنا</span></a></div>
+			<div><a href="#visit"><span class="en">VISIT</span><span class="ar">زيارة</span></a></div>
 		</div>
 
 	</div>
 
 
 	<div class="main_slider">
+		<div class="main_slider_header">
+			<span class="en">Smile Brighter. Live Better.</span>
+			<span class="ar">ابتسامة جميلة لحياة اجمل</span>
+		</div>
+		<div class="main_slider_desc">
+			<span class="en">We’re committed to providing comprehensive dental care with state-of-the-art technology. We are a full service general, cosmetic, and orthodontic dental clinic. Please check out our full range of services here. Now with offices in Culver City and Irvine. </span>
+			<span class="ar"> خبرة اكثر من عشرون عاما في غرب مدينة لوس انجلس ، التزم فريق العمل بتقديم أفضل الخدمات في طب الاسنان ضمن اجواء عمل مريحة و دافئة . مع اخر التقنيات والتكنولوجية الحديثة في طب الاسنان. </span>
+		</div>
+
+		<div class="main_slider_btn">
+			<a href="#contact_us">
+				<span class="en">MAKE AN APPOINTMENT</span>
+				<span class="ar">حجز المواعيد</span>
+			</a>
+		</div>
     </div>
-
-
-	</div>
 
 	<div class="services">
 		<a name="service">
@@ -148,11 +163,12 @@
 	</div>
 
 	<div class="location_map">
-		<div id="map1">
-		</div>
+		<a name="visit"></a>
+			<div id="map1">
+			</div>
 
-		<div id="map2">
-		</div>
+			<div id="map2">
+			</div>
 	</div>
 
 	<div class="location_text">
@@ -199,7 +215,7 @@
 	</div>
 
 	<div class="contact_us">
-		<a name="visit">
+		<a name="contact_us">
 		<div class="our_team_header">
 			MEET OUR TEAM
 		</div>
@@ -214,7 +230,7 @@
 					<input type="text" name="email" placeholder="Your Email..." class="input"></input><br/>
 					<span class="input">Appointment Type</span><br/>
 					<select  class="input" placeholder="Choose from Options Below">
-					  <option value="cleaning">Teeth CLeaning</option>
+					  <option value="cleaning">Teeth Cleaning</option>
 					  <option value="braces">Braces</option>
 					  <option value="invisalign">Invisalign</option>
 					  <option value="root">Root Canal</option>
@@ -263,6 +279,6 @@
 <script src="js/scripts.js"></script>
 <script type="text/javascript" src="js/jssor.slider.mini.js"></script>
 <script src="js/jsImgSlider/themes/1/js-image-slider.js" type="text/javascript"></script>
-<script src="https://maps.googleapis.com/maps/api/js"></script>
+<script src="https://maps.googleapis.com/maps/api/js?v=3"></script>
 <script src="js/kazem.js"></script>
 </html>
