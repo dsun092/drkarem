@@ -273,13 +273,52 @@ a:active {
 	position:relative;
 	top:150px;
 }
-.our_team_images>img{
+.doc_pic{
+	width:350px;
+	-webkit-transition: all .5s ease-in-out;
+    -moz-transition: all .5s ease-in-out;
+    -o-transition: all .5s ease-in-out;
+    -ms-transition: all .5s ease-in-out;
+    transition: all .5s ease-in-out;
+}
+.drkazem img{
 	width:350px;
 	height:350px;
 }
+.doc_pic:hover{
+	background-image: none;
+	/*background-position: 0px -380px;*/
+}
+.doc_pic:hover .doc_text{
+	opacity: 1;
+	background-color:#F5F5F5;
+	-webkit-transition: opacity .5s ease-in;
+	-moz-transition: opacity .5s ease-in;
+	-o-transition: opacity .5s ease-in;
+	transition: opacity .5s ease-in;
+	z-index:30;
+}
+.doc_text span{
+	position: relative;
+    top: 20px;
+    left: 30px;
+}
 .doc_text{
 	opacity: 0;
+    text-align: left;
+    font-size: 23px;
+    color: #464646;
+    position: absolute;
+    top: 0px;
+    width: 350px;
+    height: 350px;
 }
+.doc_desc{
+	font-size: 18px;
+	font-family: 'Roboto Thin'; 
+	left: 0px !important;
+}
+
 
 .our_office{
 	width:100%;
@@ -374,7 +413,6 @@ a:active {
 }
  .contact_us_form{
  	text-align:left;
- 	width:50%;
  	margin: 0 auto;
  	position:relative;
  	top: 120px;
@@ -385,10 +423,28 @@ a:active {
  	justify-content:space-around;
  }
  .right_form .input{
- 	width:300px;
+ 	width:100%;
+ 	height:30px;
+ 	margin-bottom: 5px;
+ }
+ .left_form{
+ 	width:31%;
+ 	margin-left:13%;
+ }
+ .right_form{
+ 	width:31%;
+ 	margin-right:13%;
  }
   .left_form .input{
- 	width:300px;
+  	width:100%;
+  	height:30px;
+ 	margin-bottom: 5px;
+ }
+ .contact_desc{
+ 	font-size:18px;
+ 	color:white;
+ 	position:relative;
+ 	top: 75px;
  }
 
  .footer{
