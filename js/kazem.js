@@ -21,7 +21,6 @@ $(window).load(function(){
       scaleControl: false,
       draggable: false,
       navigationControl: false,
-      scrollwheel: false,
     });
 
     map2 = new google.maps.Map(document.getElementById('map2'), {
@@ -31,7 +30,6 @@ $(window).load(function(){
       scaleControl: false,
       draggable: false,
       navigationControl: false,
-      scrollwheel: false,
     });
 
     marker1 = new google.maps.Marker({
