@@ -224,15 +224,16 @@ a:active {
 	justify-content:space-around;
 }
 .services>a{
-	width:90%;
-	display:flex;
-	justify-content:space-around;
+	display: flex;
+    margin-left: 13%;
+    justify-content: space-between;
+    margin-right: 13%;
 }
 
 .service_column1, .service_column2, .service_column3, .service_column4{
 	width:225px;
 	position:relative;
-	top:50px;
+	top:60px;
 }
 
 .service_header{
