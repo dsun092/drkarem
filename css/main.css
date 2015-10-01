@@ -298,11 +298,6 @@ a:active {
 	transition: opacity .5s ease-in;
 	z-index:30;
 }
-.doc_text span{
-	position: relative;
-    top: 20px;
-    left: 30px;
-}
 .doc_text{
 	opacity: 0;
     text-align: left;
@@ -313,10 +308,16 @@ a:active {
     width: 350px;
     height: 350px;
 }
+.doc_text div{
+	position:relative;
+	top:20px;
+	margin-left:20px;
+	width:320px;
+}
+
 .doc_desc{
 	font-size: 18px;
 	font-family: 'Roboto Thin'; 
-	left: 0px !important;
 }
 
 
