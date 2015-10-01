@@ -50,7 +50,7 @@ a:active {
 
 .top_bar .contact_info{
   position: relative;
-  left: 100px;
+  margin-left:13%;
   line-height: 40px;
 }
 
@@ -60,8 +60,8 @@ a:active {
 }
 .top_bar .social_media_icon{
   position: relative;
-  width: 250px;
   float: right;
+  margin-right:13%;
   line-height: 40px;
 }
 .social_media_icon>i{
@@ -88,17 +88,22 @@ a:active {
 	line-height: 155px;
 	width:100%;
 	background-color: #FFFFFF;
-	-moz-transition: height .5s, width .5s,font-size .5s, left 1s ease;
-    -webkit-transition: height .5s, width .5s, font-size .5s, left 1s ease;
-    -o-transition: height .5s, width .5s, font-size .5s, left 1s ease;
-    transition: height .5s, width .5s, font-size .5s, left 1s ease;
+	-moz-transition: height .5s, width .5s,font-size .5s, left .5s ease;
+    -webkit-transition: height .5s, width .5s, font-size .5s, left .5s ease;
+    -o-transition: height .5s, width .5s, font-size .5s, left .5s ease;
+    transition: height .5s, width .5s, font-size .5s, left .5s ease;
 }
 
 .main_menu .main_logo{
 	position:absolute;
-	left:100px;
+	margin-left: 13%;
 	width:420px;
 	display:inline-block;
+	-webkit-transition: all .5s ease;
+    -moz-transition: all .5s ease;
+    -o-transition: all .5s ease;
+    -ms-transition: all .5s ease;
+    transition: all .5s ease;
 }
 
 .main_menu .main_logo>img{
@@ -112,9 +117,11 @@ a:active {
 }
 
 .main_menu .top_navi{
-	position:absolute;
-	display:inline-block;
-	right:100px;
+	position: absolute;
+    width: 700px;
+    display: flex;
+    justify-content: space-between;
+    right: 13%;
 }
 
 .top_navi div{
@@ -123,7 +130,6 @@ a:active {
 
 .main_menu .top_navi div>span, .main_menu .top_navi div>a{
 	font-size:18px;
-	margin-right:20px;
 	text-decoration:none;
 }
 .main_menu .top_navi div>a:hover{
@@ -140,9 +146,7 @@ a:active {
     -moz-box-shadow: 0 8px 6px -6px #929292;
     box-shadow: 0 8px 6px -6px #929292;
 }
-.fixed .main_logo{
-	left: 200px;
-}
+
 .fixed .main_logo>span{
 	font-size:18px;
 }
