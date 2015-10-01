@@ -145,9 +145,9 @@ a:active {
 	z-index: 1000;
 	height:60px;
 	line-height:60px;
-	-webkit-box-shadow: 0 8px 6px -6px #929292;
-    -moz-box-shadow: 0 8px 6px -6px #929292;
-    box-shadow: 0 8px 6px -6px #929292;
+	-webkit-box-shadow: 0 6px 3px -6px #929292;
+    -moz-box-shadow: 0 6px 3px -6px #929292;
+    box-shadow: 0 6px 3px -6px #929292;
 }
 
 .fixed .main_logo>span{
@@ -166,6 +166,9 @@ a:active {
 	position:absolute;
 	top:195px;
 	width:100%;
+	-webkit-box-shadow: 0 9px 3px -9px #000;
+    -moz-box-shadow: 0 9px 3px -9px #000;
+    box-shadow: 0 9px 3px -9px #000;
 }
 .main_slider_header{
 	 font-size: 60px;
@@ -277,10 +280,19 @@ a:active {
 }
 .our_team_images{
 	display:flex;
-	justify-content:space-around;
+	justify-content:space-between;
 	position:relative;
 	top:150px;
+	margin-left:10%;
+	margin-right:10%;
 }
+.our_team_images>div{
+	height: 350px;
+	-webkit-box-shadow: 0 9px 3px -9px #000;
+    -moz-box-shadow: 0 9px 3px -9px #000;
+    box-shadow: 0 9px 3px -9px #000;
+}
+
 .doc_pic{
 	width:350px;
 	-webkit-transition: all .5s ease-in-out;
@@ -289,7 +301,7 @@ a:active {
     -ms-transition: all .5s ease-in-out;
     transition: all .5s ease-in-out;
 }
-.drkazem img{
+.our_team_images img{
 	width:350px;
 	height:350px;
 }
@@ -316,6 +328,9 @@ a:active {
     width: 350px;
     height: 350px;
 }
+.doc_name{
+	font-weight:700;
+}
 .doc_text div{
 	position:relative;
 	top:20px;
@@ -325,7 +340,7 @@ a:active {
 
 .doc_desc{
 	font-size: 18px;
-	font-family: 'Roboto Thin'; 
+	font-family: 'Roboto'; 
 }
 
 
@@ -342,7 +357,8 @@ a:active {
 	justify-content: space-around;
 }
 .our_office_row>img{
-	width:33%;
+	width: 33.20%;
+    border: 1px solid #ddD;
 }
 .testimonials{
 	position:absolute;
