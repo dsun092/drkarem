@@ -390,10 +390,17 @@ a:active {
 .location_text{
 	width:100%;
 	position:absolute;
-	top:3775px;
+	top:3820px;
 	height:400px;
+	border-bottom: 1px solid #DDD;
 	display:flex;
-	justify-content:space-around;
+	justify-content:space-between;
+}
+.location_text a{
+	display: flex;
+    margin-left: 13%;
+    justify-content: space-between;
+    margin-right: 13%;
 }
 .column{
 	position:relative;
@@ -475,9 +482,9 @@ a:active {
  }
 
  .footer{
- 	height:150px;
+ 	height:300px;
  	position:absolute;
- 	top: 4390px;
+ 	top: 4220px;
  	width:100%;
  }
  .footer .main_logo{
@@ -493,24 +500,32 @@ a:active {
 }
 
 .footer .top_navi{
-	position:absolute;
-	display:inline-block;
-	width:100%;
-	text-align:center;
-	height:150px;
+	position: absolute;
+    display: inline-block;
+    width: 100%;
+    height: 150px;
+    margin-top: 60px;
+    margin-left:13%;
+    font-size:18px;
+}
+.footer_location{
+	position: relative;
+    top: 120px;
+    margin-left: 13%;
+    font-size: 18px;
 }
 
-.footer .top_navi>span, .footer .top_navi>a{
+.footer .top_navi>span, .footer .top_navi a{
 	height:1em;
 	font-size:18px;
 	margin-right:20px;
 }
-.footer .top_navi>a:hover{
+.footer .top_navi a:hover{
 	color:#76bd22;
 	cursor: pointer;
 }
-.footer .top_navi>img{
-	height:135px;
-	width:135px;
+.footer img{
+	width: 39px;
+    height: 39px;
 	vertical-align:middle;
 }
