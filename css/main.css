@@ -188,6 +188,7 @@ a:active {
     font-size: 30px;
     line-height: 36px;
     font-family: 'Roboto';
+    font-weight: 100;
     position:relative;
     top:33%;
     margin-left: 13%;
@@ -376,6 +377,7 @@ a:active {
 .doc_desc{
 	font-size: 18px;
 	font-family: 'Roboto'; 
+	font-weight: 100;
 }
 
 
@@ -438,12 +440,14 @@ a:active {
 .office_header{
     top: 45% !important;
     text-align: center;
-    font-size: 50px;
+    font-size: 48px;
+    font-weight:300;
 }
 
 .office_desc{
 	font-size: 18px;
 	font-family: 'Roboto'; 
+	font-weight: 100;
 }
 .gallery_button span{
 	cursor: pointer;
@@ -566,12 +570,16 @@ a:active {
 	font-size:18px;
 	color:#AFAFAF;
 	margin-top: 0px;
+	font-family: 'Roboto';
+	font-weight: 100;
 }
 
 .loc_number{
 	font-size:18px;
 	color:#AFAFAF;
 	margin-bottom:10px;
+	font-family: 'Roboto';
+	font-weight: 100;
 }
 .column_office{
 	position:relative;
@@ -581,6 +589,8 @@ a:active {
 .office_hours{
 	font-size:30px;
 	color:#AFAFAF;
+	font-family: 'Roboto';
+	font-weight: 100;
 }
 .office_text .tab{
 	float:right;
@@ -662,6 +672,7 @@ a:active {
     top: 100px;
     margin-left: 13%;
     font-size: 18px;
+    height: 30px;
 }
 
 .footer .top_navi>span, .footer .top_navi a{
