@@ -181,6 +181,7 @@ a:active {
     position: relative;
     top: 30%;
     margin-left: 13%;
+    width: 655px;
 }
 .main_slider_desc{
 	color: white;
@@ -233,6 +234,10 @@ a:active {
 }
 .slider_text_right{
 	margin-left: 54%;
+	text-align: right;
+}
+.main_slider_btn.slider_text_right{
+	margin-left: 71%;
 }
 
 
