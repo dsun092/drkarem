@@ -13,39 +13,42 @@ var marker;
 var marker2;
 var english = true;
 
-$(window).load(function(){
-  setTimeout(function(){
-    map = new google.maps.Map(document.getElementById('map1'), {
-      center: {lat: 34.014440, lng: -118.407727},
-      scrollwheel: false,
-      zoom: 15,
-      scaleControl: false,
-      navigationControl: false,
-    });
+map = new google.maps.Map(document.getElementById('map1'), {
+  center: {lat: 34.014440, lng: -118.407727},
+  scrollwheel: false,
+  zoom: 15,
+  scaleControl: false,
+  navigationControl: false,
+});
 
-    map2 = new google.maps.Map(document.getElementById('map2'), {
-      center: {lat: 33.665279, lng: -117.763177},
-      scrollwheel: false,
-      zoom: 15,
-      scaleControl: false,
-      navigationControl: false,
-    });
+map2 = new google.maps.Map(document.getElementById('map2'), {
+  center: {lat: 33.665279, lng: -117.763177},
+  scrollwheel: false,
+  zoom: 15,
+  scaleControl: false,
+  navigationControl: false,
+});
 
-    marker1 = new google.maps.Marker({
-      position: {lat: 34.014440, lng: -118.407727},
-      map: map,
-      icon: 'images/Marker.png'
-    });
+marker1 = new google.maps.Marker({
+  position: {lat: 34.014440, lng: -118.407727},
+  map: map,
+  icon: 'images/Marker.png'
+});
 
-    marker2 = new google.maps.Marker({
-      position: {lat: 33.665279, lng: -117.763177},
-      map: map2,
-      icon: 'images/Marker.png'
-    });
-    google.maps.event.trigger(map, 'resize');
-    google.maps.event.trigger(map2, 'resize');
-  }, 1000)
-})
+marker2 = new google.maps.Marker({
+  position: {lat: 33.665279, lng: -117.763177},
+  map: map2,
+  icon: 'images/Marker.png'
+});
+google.maps.event.trigger(map, 'resize');
+google.maps.event.trigger(map2, 'resize');
+
+var cw = $('.our_office_row').first().width();
+cw = cw * .332;
+console.log(cw);
+height = cw * 0.72;
+console.log(height);
+$('.our_office_row').css({'height': height});
 
 $('#english').click(function(){
   english = true;

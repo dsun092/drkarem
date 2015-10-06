@@ -426,6 +426,23 @@ a:active {
 	transition: opacity .5s ease-in;
 	z-index:30;
 }
+.office_image_main_text{
+	text-align: left;
+    font-size: 23px;
+    color: #464646;
+    position: absolute;
+    top: 0px;
+    width: 33.20%;
+    height: 50%;
+}
+.office_image_main_text div{
+	position: relative;
+    top: 15%;
+    margin: 0 auto;
+    margin-bottom: 30px;
+    width: 400px;
+}
+
 .office_image_text{
 	opacity: 0;
     text-align: left;
@@ -435,23 +452,23 @@ a:active {
     top: 0px;
     width: 33.20%;
     height: 50%;
+    display:inline-flex;
 }
 .row2{
 	top:50% !important;
 }
 .office_image_text div{
 	position: relative;
-    top: 30%;
-    margin: 0 auto;
-    margin-bottom: 30px;
-    width: 400px;
+	/* top: 30%; */
+	margin: auto 0;
+	/* margin-bottom: 30px; */
+	width: 100%;
 }
 .office_head{
 	font-size: 30px;
 	font-weight:700;
 }
 .office_header{
-    top: 45% !important;
     text-align: center;
     font-size: 48px;
     font-weight:300;
