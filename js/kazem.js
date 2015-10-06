@@ -56,11 +56,12 @@ $('#english').click(function(){
   console.log(en);
   $.each(en, function(item, value){
     console.log(value);
-    $(value).css('display', 'inline');
+    $(value).css({'display': 'inline'});
   })
   var ar = $('.ar');
   $.each(ar, function(item, value){
-    $(value).css('display', 'none');
+    $(value).css({'display': 'none'});
+    $(value).css({'text-align': 'right'});
   })
 })
 
@@ -68,13 +69,14 @@ $('#arabic').click(function(){
   english = false;
   var ar = $('.ar');
   $.each(ar, function(item, value){
-    $(value).css('display', 'inline');
+    $(value).css({'display': 'inline'});
+    $(value).css({'text-align': 'right'});
   })
   var en = $('.en');
   console.log(en);
   $.each(en, function(item, value){
     console.log(value);
-    $(value).css('display', 'none');
+    $(value).css({'display': 'none'});
   })
 })
 

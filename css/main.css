@@ -176,13 +176,14 @@ a:active {
 }
 .main_slider_header{
 	 font-size: 60px;
-    font-weight: 700;
-    color: white;
-    line-height: 72px;
-    position: relative;
-    top: 30%;
-    margin-left: 13%;
-    width: 655px;
+	 font-weight: 700;
+	 color: white;
+	 line-height: 72px;
+	 position: relative;
+	 top: 30%;
+	 margin-left: 13%;
+	 min-width: 655px;
+	 width: 655px;
 }
 .main_slider_desc{
 	color: white;
@@ -235,11 +236,11 @@ a:active {
 	background-color: #DDD;
 }
 .slider_text_right{
-	margin-left: 54%;
+	margin-left: 47%;
 	text-align: right;
 }
 .main_slider_btn.slider_text_right{
-	margin-left: 71%;
+	margin-left: 64%;
 }
 
 
