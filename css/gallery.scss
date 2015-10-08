@@ -1,0 +1,38 @@
+.top_bar{
+    position:relative;
+    top:0px;
+}
+.main_menu{
+    position:relative;
+    top: 0px;
+    border-bottom: 1px solid #DDD;
+}
+.image_gallery{
+    position: relative;
+    top: 30px;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 60px;
+    border-bottom: 1px solid #ddd;
+}
+.image_col{
+    width: 24.5%;
+    height: auto;
+}
+.image_col>div{
+    max-height: 500px;
+    overflow: hidden;
+    margin-bottom: 10px;
+}
+
+.image_gallery img{
+    min-width:100%;
+    min-height: 100%;
+}
+
+
+.footer{
+    position:relative;
+    top: 0px;
+}
