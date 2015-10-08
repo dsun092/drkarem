@@ -1,9 +1,22 @@
 console.log("hello world");
 
-$(window).bind('scroll', function () {
-    if ($(window).scrollTop() > 50) {
+// $(window).bind('scroll', function () {
+//     if ($(window).scrollTop() > 50) {
+//         $('.main_menu').addClass('fixed');
+//     } else {
+//         $('.main_menu').removeClass('fixed');
+//     }
+// });
+$(document).bind('scrollstart', function () {
+    if ($(document).scrollTop() > 50) {
+      if($('.main_menu').hasClass('fixed')){
+        console.log('has');
+        return;
+      }
+      else{
         $('.main_menu').addClass('fixed');
-    } else {
+      }
+    } else if($(document).scrollTop() <= 50) {
         $('.main_menu').removeClass('fixed');
     }
 });
