@@ -284,6 +284,7 @@ a:active {
     margin-right: 13%;
     padding-top:60px;
     padding-bottom:60px;
+    flex-flow: row wrap;
     @media screen and (max-device-width: $mobile){
 	    display: block;
 	    /* overflow: auto; */
@@ -294,7 +295,7 @@ a:active {
 }
 
 .service_column1, .service_column2, .service_column3, .service_column4{
-	width:225px;
+	width:240px;
 	position:relative;
 	@media screen and (max-device-width: $mobile){
     	width: 50%;
@@ -353,9 +354,6 @@ a:active {
     padding-top:30px;
     padding-bottom:60px;
 	width:100%;
-	@media screen and (min-device-width: '1900px'){
-    	width: 80%;
-    }
 }
 .our_team_images{
 	display:flex;

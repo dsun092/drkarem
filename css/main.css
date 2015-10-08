@@ -264,7 +264,8 @@ a:active {
   justify-content: space-between;
   margin-right: 13%;
   padding-top: 60px;
-  padding-bottom: 60px; }
+  padding-bottom: 60px;
+  flex-flow: row wrap; }
   @media screen and (max-device-width: 420px) {
     .services > a {
       display: block;
@@ -274,7 +275,7 @@ a:active {
       text-align: center; } }
 
 .service_column1, .service_column2, .service_column3, .service_column4 {
-  width: 225px;
+  width: 240px;
   position: relative; }
   @media screen and (max-device-width: 420px) {
     .service_column1, .service_column2, .service_column3, .service_column4 {
@@ -329,9 +330,6 @@ a:active {
   padding-top: 30px;
   padding-bottom: 60px;
   width: 100%; }
-  @media screen and (min-device-width: 1900px) {
-    .our_images_container {
-      width: 80%; } }
 
 .our_team_images {
   display: flex;
