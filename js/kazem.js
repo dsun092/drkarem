@@ -8,15 +8,17 @@ console.log("hello world");
 //     }
 // });
 $(document).bind('scrollstart', function () {
-    if ($(document).scrollTop() > 50) {
-      if($('.main_menu').hasClass('fixed')){
+    if($('.main_menu').hasClass('fixed')){
         console.log('has');
         return;
       }
-      else{
+    else{
         $('.main_menu').addClass('fixed');
-      }
-    } else if($(document).scrollTop() <= 50) {
+     }
+});
+$(document).bind('scrollstop', function () {
+    if($(document).scrollTop() <= 50) {
+      console.log('remove');
         $('.main_menu').removeClass('fixed');
     }
 });
