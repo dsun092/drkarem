@@ -46,9 +46,9 @@ google.maps.event.trigger(map2, 'resize');
 var cw = $('.our_office_row').first().width();
 cw = cw * .332;
 console.log(cw);
-height = cw * 0.72;
+height = cw * .72;
 console.log(height);
-$('.our_office_row').css({'height': height});
+$('.office_pic').css({'height': height});
 
 $('#english').click(function(){
   english = true;

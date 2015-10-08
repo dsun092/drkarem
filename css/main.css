@@ -155,7 +155,7 @@ a:active {
   background-size: cover;
   background-image: url("http://development.drkazem.divshot.io/images/doctors/hero1.png");
   background-repeat: no-repeat;
-  background-position: 50% 50%;
+  background-position: 50% -50%;
   background-attachment: fixed;
   height: 855px;
   position: relative;
@@ -332,6 +332,9 @@ a:active {
   padding-top: 30px;
   padding-bottom: 60px;
   width: 100%; }
+  @media screen and (min-device-width: 1900px) {
+    .our_images_container {
+      width: 80%; } }
 
 .our_team_images {
   display: flex;
@@ -421,19 +424,44 @@ a:active {
 .our_office_row {
   width: 100%;
   /* float: left; */
-  height: 50%;
   display: flex;
-  justify-content: space-around; }
+  justify-content: space-around;
+  flex-flow: row wrap; }
+  .our_office_row .two {
+    background-image: url("http://development.drkazem.divshot.io/images/doctors/image8.JPG");
+    background-size: cover;
+    background-repeat: no-repeat; }
+  .our_office_row .three {
+    background-image: url("http://development.drkazem.divshot.io/images/doctors/image5.JPG");
+    background-size: cover;
+    background-repeat: no-repeat; }
+  .our_office_row .four {
+    background-image: url("http://development.drkazem.divshot.io/images/doctors/image14.JPG");
+    background-size: cover;
+    background-repeat: no-repeat; }
+  .our_office_row .five {
+    background-image: url("http://development.drkazem.divshot.io/images/doctors/image3.JPG");
+    background-size: cover;
+    background-repeat: no-repeat; }
+  .our_office_row .six {
+    background-image: url("http://development.drkazem.divshot.io/images/doctors/image12.JPG");
+    background-size: cover;
+    background-repeat: no-repeat; }
 
 .office_pic {
+  background-position: 50% 50%;
   width: 33.20%;
-  height: 100%;
+  height: 50%;
   border: 1px solid #ddD;
   -webkit-transition: all .5s ease-in-out;
   -moz-transition: all .5s ease-in-out;
   -o-transition: all .5s ease-in-out;
   -ms-transition: all .5s ease-in-out;
   transition: all .5s ease-in-out; }
+  @media screen and (max-device-width: 420px) {
+    .office_pic {
+      width: 100%;
+      height: 600px !important; } }
 
 .office_pic:hover .office_image_text {
   opacity: .8;
@@ -446,29 +474,36 @@ a:active {
 
 .office_image_main_text {
   text-align: left;
-  font-size: 23px;
+  font-size: 2em;
   color: #464646;
   position: absolute;
   top: 0px;
-  width: 33.20%;
+  width: 33.22%;
   height: 50%; }
-
-.office_image_main_text div {
-  position: relative;
-  top: 15%;
-  margin: 0 auto;
-  margin-bottom: 30px;
-  width: 400px; }
+  .office_image_main_text div {
+    position: relative;
+    top: 15%;
+    margin: 0 auto;
+    margin-bottom: 30px;
+    width: 400px; }
+  @media screen and (max-device-width: 420px) {
+    .office_image_main_text {
+      width: 100%;
+      height: 600px !important; }
+      .office_image_main_text div {
+        width: 80%; }
+      .office_image_main_text .office_head {
+        font-size: 2em; }
+      .office_image_main_text .office_desc {
+        font-size: 1.2em; } }
 
 .office_image_text {
   opacity: 0;
   text-align: left;
   font-size: 23px;
   color: #464646;
-  position: absolute;
-  top: 0px;
-  width: 33.20%;
-  height: 50%;
+  width: 100%;
+  height: 100%;
   display: inline-flex; }
 
 .row2 {
@@ -603,6 +638,11 @@ a:active {
   margin-left: 13%;
   justify-content: space-between;
   margin-right: 13%; }
+  @media screen and (max-device-width: 420px) {
+    .location_text a {
+      margin-left: 0px;
+      margin-right: 0px;
+      justify-content: space-around; } }
 
 .column {
   position: relative;
