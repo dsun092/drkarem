@@ -166,6 +166,64 @@ $(document).ready(function() {
       }
     })
   })
-
+  if( $('.test_buttons_container').first().css('display')=='none') {
+        var current_test = 0;
+        console.log("is mobile");
+        $('.testimonials').first().on('click', function(event){
+          console.log("hello");
+        })
+          $('.testimonials').first().on('swiperight', function(event){
+            console.log(event);
+            if(current_test !== 3){
+              current_test++;
+            }
+            else{
+              current_test = 0;
+            }
+              $('.testimonial_text').fadeOut('slow', function() {
+                $('.testimonial_text').text(test_text[current_test]).fadeIn('slow');
+              });
+              $('.testimonial_text_ar').fadeOut('slow', function() {
+                  $('.testimonial_text_ar').text(test_text_ar[current_test]).fadeIn('slow');
+              });
+              $('.testimonial_author').fadeOut('slow', function() {
+                  $('.testimonial_author').text(test_author[current_test]).fadeIn('slow');
+              });
+              if(english){
+                $('.testimonial_text').css('display', 'inline');
+                $('.testimonial_text_ar').css('display', 'none');
+              }
+              else{
+                $('.testimonial_text').css('display', 'none');
+                $('.testimonial_text_ar').css('display', 'inline');
+              }
+          })
+          $('.testimonials').first().on('swipeleft', function(event){
+            console.log(event);
+            if(current_test !== 0){
+              current_test--;
+            }
+            else{
+              current_test = 3;
+            }
+              $('.testimonial_text').fadeOut('slow', function() {
+                $('.testimonial_text').text(test_text[current_test]).fadeIn('slow');
+              });
+              $('.testimonial_text_ar').fadeOut('slow', function() {
+                  $('.testimonial_text_ar').text(test_text_ar[current_test]).fadeIn('slow');
+              });
+              $('.testimonial_author').fadeOut('slow', function() {
+                  $('.testimonial_author').text(test_author[current_test]).fadeIn('slow');
+              });
+              if(english){
+                $('.testimonial_text').css('display', 'inline');
+                $('.testimonial_text_ar').css('display', 'none');
+              }
+              else{
+                $('.testimonial_text').css('display', 'none');
+                $('.testimonial_text_ar').css('display', 'inline');
+              }
+          })
+    }
 
 });
