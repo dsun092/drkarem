@@ -613,9 +613,7 @@ a:active {
   margin-left: 10px; }
 
 .contact_us {
-  position: absolute;
   width: 100%;
-  top: 4220px;
   height: 550px;
   background-color: #76bd22;
   text-align: center; }

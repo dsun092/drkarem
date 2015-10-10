@@ -27,10 +27,8 @@
 		</span></div>
 
 		<div class="social_media_icon">
-			<i class="fa fa-facebook"></i>
-			<i class="fa fa-yelp"></i>
-			<span id="english">EN</span>
-			<span id="arabic">AR</span>
+			<i onclick="location.href='https://www.facebook.com/DrKazemDentistry';" class="fa fa-facebook"></i>
+			<i onclick="location.href='http://www.yelp.com/biz/kazem-dentistry-culver-city';"class="fa fa-yelp"></i>
 		</div>
 	</div>
 
@@ -52,26 +50,33 @@
 
 	</div>
 
+	<div class="modal-overlay" id="modal_window"  aria-hidden="true" role="dialog" aria-labelledby="modal_title">
+    <div class="modal-content" id="modal_holder" role="document" style="margin-top:150px;">
+              <img src="" class="showPic"/>
+      <button class="btn-close" id="modal_close" type="button" aria-label="close">X</button>
+    </div> <!-- end .modal-content -->
+  </div> <!-- end .modal-overlay -->
+
 	<div class="image_gallery">
 		<div class="image_col">
-			<div><img src="images/doctors/image1.JPG"></img></div>
-			<div><img src="images/doctors/image7.JPG"></img></div>
-			<div><img src="images/doctors/image13.JPG"></img></div>
+			<div><img class="getSrc" src="images/doctors/image1.JPG"></img></div>
+			<div><img class="getSrc" src="images/doctors/image7.JPG"></img></div>
+			<div><img class="getSrc" src="images/doctors/image13.JPG"></img></div>
 		</div>
 		<div class="image_col">
-			<div><img src="images/doctors/image9.JPG"></img></div>
-			<div><img src="images/doctors/image3.JPG"></img></div>
-			<div><img src="images/doctors/image11.JPG"></img></div>
+			<div><img class="getSrc" src="images/doctors/image9.JPG"></img></div>
+			<div><img class="getSrc" src="images/doctors/image3.JPG"></img></div>
+			<div><img class="getSrc" src="images/doctors/image11.JPG"></img></div>
 		</div>
 		<div class="image_col">
-			<div><img src="images/doctors/image10.JPG"></img></div>
-			<div><img src="images/doctors/NAT_8456.JPG"></img></div>
-			<div><img src="images/doctors/image2.JPG"></img></div>
+			<div><img class="getSrc" src="images/doctors/image10.JPG"></img></div>
+			<div><img class="getSrc" src="images/doctors/NAT_8456.JPG"></img></div>
+			<div><img class="getSrc" src="images/doctors/image2.JPG"></img></div>
 		</div>
 		<div class="image_col">
-			<div><img src="images/doctors/NAT_8380.JPG"></img></div>
-			<div><img src="images/doctors/image8.JPG"></img></div>
-			<div><img src="images/doctors/image4.JPG"></img></div>
+			<div><img class="getSrc" src="images/doctors/NAT_8380.JPG"></img></div>
+			<div><img class="getSrc" src="images/doctors/image8.JPG"></img></div>
+			<div><img class="getSrc" src="images/doctors/image4.JPG"></img></div>
 		</div>
 	</div>
 
@@ -104,5 +109,6 @@
 
 </body>
 
+<script src="js/modal_window.js"></script>
 <script src="https://maps.googleapis.com/maps/api/js?v=3"></script>
 </html>

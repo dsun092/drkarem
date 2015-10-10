@@ -1,6 +1,23 @@
+var slider_text_one = "We’re committed to providing comprehensive dental care with state-of-the-art technology. We are a full service general, cosmetic, and orthodontic dental clinic. Please check out our full range of services here. Now with offices in Culver City and Irvine.";
+var slider_text_one_ar = "خبرة اكثر من عشرون عاما في غرب مدينة لوس انجلس ، التزم فريق العمل بتقديم أفضل الخدمات في طب الاسنان ضمن اجواء عمل مريحة و دافئة . مع اخر التقنيات والتكنولوجية الحديثة في طب الاسنان";
+
+var slider_text_two ="With twenty years of experience serving the West Los Angeles area, our staff is committed to providing the best oral care all while creating a warm and inviting environment for our patients.";
+var slider_text_two_ar = "بخبرة لا تقل عن عشرون عاما في منطقة غرب لوس انجلوس، التزم فريق العمل بتقديم افضل الخدمات في طب الاسنان ضمن اجواء عمل تبعث على الدفء والترحيب للمرضى.";
+
+var slider_text_three = "We’re committed to providing comprehensive dental care with state-of-the-art technology to Southern California.";
+var slider_text_three_ar = "متواجدون في غرب لوس انجلوس منذ عام ١٩٩٦. ملتزمون بتقديم خدمة طبية شاملة باستخدام تكنولوجيا متطورة لجنوب كاليفورنيا. بامكانك الاطلاع على كامل خدماتنا هنا!";
+
+var slider_text_four ="Our office combines state-of-the-art technology with modern architecture in order to offer the best dental care in a friendly environment.";
+var slider_text_four_ar="يجمع مركزنا بين فن التصميم وفن العمارة الحديثة وذلك لتقديم افضل عناية لطب الاسنان في اجواء راقية.";
+
+var slider_text_five = "With twenty years of experience serving the West Los Angeles area, our staff is committed to providing the best oral care all while creating a warm and inviting environment for our patients.";
+var slider_text_five_ar="بخبرة لا تقل عن عشرون عاما في منطقة غرب لوس انجلوس، التزم فريق العمل بتقديم افضل الخدمات في طب الاسنان ضمن اجواء عمل تبعث على الدفء والترحيب للمرضى.";
+
+var slider_text_array = [slider_text_one, slider_text_two, slider_text_three, slider_text_four, slider_text_five];
+var slider_text_array_ar =[slider_text_one_ar, slider_text_two_ar, slider_text_three_ar, slider_text_four_ar, slider_text_five_ar];
+
 $(document).bind('scrollstart', function () {
     if($('.main_menu').hasClass('fixed')){
-        console.log('has');
         return;
       }
     else{
@@ -9,7 +26,6 @@ $(document).bind('scrollstart', function () {
 });
 $(document).bind('scrollstop', function () {
     if($(document).scrollTop() <= 50) {
-      console.log('remove');
         $('.main_menu').removeClass('fixed');
     }
 });
@@ -68,8 +84,8 @@ $('#english').click(function(){
   var ar = $('.ar');
   $.each(ar, function(item, value){
     $(value).css({'display': 'none'});
-    $(value).css({'text-align': 'right'});
   })
+  $('.doc_text').css({'text-align': 'left'});
 })
 
 $('#arabic').click(function(){
@@ -77,7 +93,6 @@ $('#arabic').click(function(){
   var ar = $('.ar');
   $.each(ar, function(item, value){
     $(value).css({'display': 'inline'});
-    $(value).css({'text-align': 'right'});
   })
   var en = $('.en');
   console.log(en);
@@ -85,7 +100,18 @@ $('#arabic').click(function(){
     console.log(value);
     $(value).css({'display': 'none'});
   })
+  $('.doc_text').css({'text-align': 'right'});
 })
+
+$.ajax({
+  url: "text.json",
+  success: function(resp){
+    console.log(resp);
+  },
+  error: function(fun, status, error){
+    console.log(error);
+  }
+});
 
 $(document).ready(function() {
   $('a[href^="#"]').click(function() {
@@ -96,65 +122,121 @@ $(document).ready(function() {
       return false;
   });
 var count = 0;
-  var hero_images = ['url(images/doctors/hero1.png)', 'url(images/doctors/hero2.png)', 'url(images/doctors/hero3.png)', 'url(images/doctors/hero4.png)', 'url(images/doctors/hero5.png)']
+var hero_images = ['url(images/doctors/hero1.jpg)', 'url(images/doctors/hero2.jpg)', 'url(images/doctors/hero3.jpg)', 'url(images/doctors/hero4.jpg)', 'url(images/doctors/hero5.jpg)']
   $('#button1').on('click', function() {
-    $('.main_slider').css('background-image', hero_images[0]);
-    $('.main_slider_header').removeClass('slider_text_right');
-    $('.main_slider_desc').removeClass('slider_text_right');
-    $('.main_slider_btn').removeClass('slider_text_right');
-    count = 0;
+    skip = true;
+    clearInterval(interval);
+    window.clearTimeout(timeout);
+    $('.main_slider').animate({ opacity: 0 }, { duration: 1000 });
+    setTimeout(function(){
+      $('.slider_text').text(slider_text_array[0]);
+      $('.slider_text_ar').text(slider_text_array_ar[0]);
+      $('.main_slider').css('background-image', hero_images[0]);
+      $('.main_slider_header').removeClass('slider_text_right');
+      $('.main_slider_desc').removeClass('slider_text_right');
+      $('.main_slider_btn').removeClass('slider_text_right');
+      $('.main_slider').animate({ opacity: 1 }, { duration: 1000 })
+      interval = setInterval(transition, 6000);
+      count = 0;
+    }, 1000);
   })
   $('#button2').on('click', function() {
-      $('.main_slider').css('background-image', hero_images[1]);
-      $('.main_slider_header').removeClass('slider_text_right');
-      $('.main_slider_desc').removeClass('slider_text_right');
-      $('.main_slider_btn').removeClass('slider_text_right');
-      count = 1;
+    skip = true;
+      clearInterval(interval);
+      window.clearTimeout(timeout);
+      $('.main_slider').animate({ opacity: 0 }, { duration: 1000 });
+      setTimeout(function(){
+        $('.slider_text').text(slider_text_array[1]);
+        $('.slider_text_ar').text(slider_text_array_ar[1]);
+        $('.main_slider').css('background-image', hero_images[1]);
+        $('.main_slider_header').removeClass('slider_text_right');
+        $('.main_slider_desc').removeClass('slider_text_right');
+        $('.main_slider_btn').removeClass('slider_text_right');
+        $('.main_slider').animate({ opacity: 1 }, { duration: 1000 });
+        interval = setInterval(transition, 6000);
+        count = 1;
+      }, 1000);
   })
   $('#button3').on('click', function() {
-      $('.main_slider').css('background-image', hero_images[2]);
+    skip = true;
+      clearInterval(interval);
+      window.clearTimeout(timeout);
+      $('.main_slider').animate({ opacity: 0 }, { duration: 1000 });
+      setTimeout(function(){
+        $('.slider_text').text(slider_text_array[2]);
+        $('.slider_text_ar').text(slider_text_array_ar[2]);
+        $('.main_slider').css('background-image', hero_images[2]);
+        $('.main_slider_header').removeClass('slider_text_right');
+        $('.main_slider_desc').removeClass('slider_text_right');
+        $('.main_slider_btn').removeClass('slider_text_right');
+        $('.main_slider').animate({ opacity: 1 }, { duration: 1000 });
+        interval = setInterval(transition, 6000);
+        count = 2;
+      }, 1000);
+  })
+  $('#button4').on('click', function() {
+      skip = true;
+      clearInterval(interval);
+      window.clearTimeout(timeout);
+      $('.main_slider').animate({ opacity: 0 }, { duration: 1000 });  
+      setTimeout(function(){
+        $('.slider_text').text(slider_text_array[3]);
+        $('.slider_text_ar').text(slider_text_array_ar[3]);
+        $('.main_slider').css('background-image', hero_images[3]);
+        $('.main_slider_header').addClass('slider_text_right');
+        $('.main_slider_desc').addClass('slider_text_right');
+        $('.main_slider_btn').addClass('slider_text_right');
+        $('.main_slider').animate({ opacity: 1 }, { duration: 1000 });
+        interval = setInterval(transition, 6000);
+        count = 3;
+      }, 1000);
+  })
+  $('#button5').on('click', function() {
+      skip = true;
+      clearInterval(interval);
+      window.clearTimeout(timeout);
+      $('.main_slider').animate({ opacity: 0 }, { duration: 1000 });
+      setTimeout(function(){
+        $('.slider_text').text(slider_text_array[4]);
+        $('.slider_text_ar').text(slider_text_array_ar[4]);
+        $('.main_slider').css('background-image', hero_images[4]);
+        $('.main_slider_header').addClass('slider_text_right');
+        $('.main_slider_desc').addClass('slider_text_right');
+        $('.main_slider_btn').addClass('slider_text_right');
+        $('.main_slider').animate({ opacity: 1 }, { duration: 1000 });
+        interval = setInterval(transition, 6000);
+        count = 4;
+      }, 1000);
+  });
+var timeout;
+var skip = false;
+function transition() {
+  if(!skip){
+    $('.slider_text').text(slider_text_array[count]);
+      $('.slider_text_ar').text(slider_text_array_ar[count]);
+    $('.main_slider').css('background-image', hero_images[count]);
+    $('.main_slider').animate({ opacity: 1 }, { duration: 1000 });
+    if(count > 2){
+      $('.main_slider_header').addClass('slider_text_right');
+      $('.main_slider_desc').addClass('slider_text_right');
+      $('.main_slider_btn').addClass('slider_text_right');
+    }
+    else{
       $('.main_slider_header').removeClass('slider_text_right');
       $('.main_slider_desc').removeClass('slider_text_right');
       $('.main_slider_btn').removeClass('slider_text_right');
-      count = 2;
-  })
-  $('#button4').on('click', function() {
-      $('.main_slider').css('background-image', hero_images[3]);
-      $('.main_slider_header').addClass('slider_text_right');
-      $('.main_slider_desc').addClass('slider_text_right');
-      $('.main_slider_btn').addClass('slider_text_right');
-      count = 3;
-  })
-  $('#button5').on('click', function() {
-      $('.main_slider').css('background-image', hero_images[4]);
-      $('.main_slider_header').addClass('slider_text_right');
-      $('.main_slider_desc').addClass('slider_text_right');
-      $('.main_slider_btn').addClass('slider_text_right');
-      count = 4;
-  });
-
-function transition() {
-  $('.main_slider').css('background-image', hero_images[count]);
-  $('.main_slider').animate({ opacity: 1 }, { duration: 1000 });
-  if(count > 2){
-    $('.main_slider_header').addClass('slider_text_right');
-    $('.main_slider_desc').addClass('slider_text_right');
-    $('.main_slider_btn').addClass('slider_text_right');
-  }
-  else{
-    $('.main_slider_header').removeClass('slider_text_right');
-    $('.main_slider_desc').removeClass('slider_text_right');
-    $('.main_slider_btn').removeClass('slider_text_right');
+    }
   }
   count++;
-  if(count === 4){
+  if(count >= 5){
     count = 0;
   }
-  setTimeout(function(){
+  timeout = setTimeout(function(){
     $('.main_slider').animate({ opacity: 0 }, { duration: 1000 });
+    skip = false;
   }, 5000)
 }
-setInterval(transition, 6000);
+var interval = setInterval(transition, 6000);
 
 
 
@@ -198,10 +280,12 @@ setInterval(transition, 6000);
       if(english){
         $('.testimonial_text').css('display', 'inline');
         $('.testimonial_text_ar').css('display', 'none');
+        $('.testimonial_text').parent().css('text-align', 'left');
       }
       else{
         $('.testimonial_text').css('display', 'none');
         $('.testimonial_text_ar').css('display', 'inline');
+        $('.testimonial_text_ar').parent().css('text-align', 'right');
       }
     })
   })
