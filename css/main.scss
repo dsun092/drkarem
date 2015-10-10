@@ -1,5 +1,6 @@
 $mobile: "420px";
 $laptop: "1350px";
+$ipad: "1000px";
 
 
 html,body
@@ -8,7 +9,7 @@ html,body
     height: auto;
     margin: 0px;
     padding: 0px;
-    overflow-x: hidden;
+    overflow-x: auto;
     /* overflow-y: auto; */
 }
 img{
@@ -99,6 +100,12 @@ a:active {
 	-webkit-transition: height .5s, width .5s, font-size .5s, left .5s ease;
 	-o-transition: height .5s, width .5s, font-size .5s, left .5s ease;
 	transition: height .5s, width .5s, font-size .5s, left .5s ease;
+	@media screen and (min-width: $laptop) and (min-width: $mobile){
+    	margin-left: 0%;
+    }
+    @media screen and (max-width: $ipad){
+    	min-width: 1000px;
+    }
 }
 
 .main_menu .main_logo{
@@ -135,6 +142,7 @@ a:active {
     display: flex;
     justify-content: space-between;
     right: 13%;
+    min-width: 550px;
     @media screen and (max-device-width: $mobile){
 		display: none;
 	}
@@ -287,13 +295,21 @@ a:active {
 	/* top: 195px; */
 	display:flex;
 	justify-content:space-around;
+	margin-top: 60px;
+}
+.services_header{
+    width:100%;
+    text-align:center;
+    font-size: 48px;
+    color: #76BD22;
+    position: absolute;
 }
 .services>a{
 	display: flex;
     margin-left: 13%;
     justify-content: space-between;
     margin-right: 13%;
-    padding-top:60px;
+    padding-top:100px;;
     padding-bottom:60px;
     flex-flow: row wrap;
     @media screen and (max-device-width: $mobile){
@@ -397,8 +413,15 @@ a:active {
     padding-top:30px;
     padding-bottom:60px;
 	width:100%;
-	@media screen and (max-width: $laptop) and (min-width: $mobile){
-	    width: 70%
+	@media screen and(min-width: "1440px"){
+		width: 80%;
+		min-width: 1440px;
+	}
+	@media screen and (max-width: "1440px") and (min-width: $ipad){
+	    width: 70%;
+    }
+    @media screen and (max-width: $ipad) and (min-width: $mobile){
+	    width: 100%;
     }
 }
 .our_team_images{

@@ -236,7 +236,7 @@ function transition() {
     skip = false;
   }, 5000)
 }
-var interval = setInterval(transition, 6000);
+//var interval = setInterval(transition, 6000);
 
 
 

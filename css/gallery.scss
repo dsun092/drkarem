@@ -1,3 +1,7 @@
+$mobile: "420px";
+$laptop: "1350px";
+$ipad: "1000px";
+
 .top_bar{
     position:relative;
     top:0px;
@@ -17,13 +21,12 @@
     border-bottom: 1px solid #ddd;
 }
 .image_col{
-    width: 24.5%;
+    width: 24.8%;
     height: auto;
 }
 .image_col>div{
     max-height: 500px;
     overflow: hidden;
-    margin-bottom: 10px;
 }
 
 .image_gallery img{
@@ -72,13 +75,16 @@
 }
 .modal-content {
   margin: auto;  
-  max-width: 80%;
+  max-width: 60%;
   overflow: auto;
   overflow-x: hidden;
   padding: 1.5em;
   position: relative;
   transform: scale(.8);
-  transition: transform .3s;;
+  transition: transform .3s;
+  @media screen and (max-width: $laptop) and (min-width: $mobile){
+    max-width: 80%;
+  }
 }
 
 
