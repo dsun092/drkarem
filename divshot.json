@@ -1,3 +1,15 @@
 {
-  "name": "drkazem"
+  "name": "drkazem",
+  "forms": {
+    "contact": {
+      "to": "drkazemdentistry@gmail.com, dsun092@gmail.com",
+      "from": "drkazemdentistry@gmail.com",
+      "replyTo": "{{fullname}} <{{email}}>",
+      "subject": "Appointment Request For {{fullname}}",
+      "html": "<b>Name:</b> {{fullname}} <br/> <b>Appointment Type:</b> {{type}} <br/> <b>Preferred Doctor: </b> {{doctor}} <br/> <b>Day</b>: {{day}} <br/> <br/> <b>Additional Comment: </b> {{commen}}",
+      "text": "Name: {{fullname}}",
+      "success": "/",
+      "failure": "/contact-failure"
+    }
+  }
 }

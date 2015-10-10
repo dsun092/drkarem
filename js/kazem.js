@@ -16,7 +16,11 @@ var slider_text_five_ar="بخبرة لا تقل عن عشرون عاما في م
 var slider_text_array = [slider_text_one, slider_text_two, slider_text_three, slider_text_four, slider_text_five];
 var slider_text_array_ar =[slider_text_one_ar, slider_text_two_ar, slider_text_three_ar, slider_text_four_ar, slider_text_five_ar];
 
-$(document).bind('scrollstart', function () {
+$(document).bind('scroll', function () {
+  if($(document).scrollTop() <= 50) {
+        $('.main_menu').removeClass('fixed');
+        return;
+    }
     if($('.main_menu').hasClass('fixed')){
         return;
       }
@@ -24,11 +28,11 @@ $(document).bind('scrollstart', function () {
         $('.main_menu').addClass('fixed');
      }
 });
-$(document).bind('scrollstop', function () {
-    if($(document).scrollTop() <= 50) {
-        $('.main_menu').removeClass('fixed');
-    }
-});
+// $(document).bind('scrollstop', function () {
+//     if($(document).scrollTop() <= 50) {
+//         $('.main_menu').removeClass('fixed');
+//     }
+// });
 
 var map;
 var map2;

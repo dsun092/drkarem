@@ -12,8 +12,8 @@
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
 
   <link href='https://fonts.googleapis.com/css?family=Roboto+Condensed:300,400,700|Roboto:100' rel='stylesheet' type='text/css'>
-  <link rel="stylesheet" href="http://code.jquery.com/mobile/1.0/jquery.mobile-1.0.min.css" />
-
+<!--   <link rel="stylesheet" href="http://code.jquery.com/mobile/1.0/jquery.mobile-1.0.min.css" />
+ -->
   <!--[if lt IE 9]>
   <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
   <![endif]-->
@@ -327,7 +327,7 @@
 			<div class="office_text">WEDS<span class="tab"> CLOSED</span></div>
 			<div class="office_text">THURS<span class="tab"> 9:00AM - 6:00PM</span></div>
 			<div class="office_text">FRI<span class="tab"> 9:00AM - 6:00PM</span></div>
-			<div class="office_text">SAT<span class="tab"> CLOSED</span></div>
+			<div class="office_text">SAT<span class="tab"> By Appointment</span></div>
 			<div class="office_text">SUN<span class="tab"> CLOSED</span></div>
 		</div>
 		<div class="column">
@@ -363,39 +363,37 @@
 		</div>
 
 		<div class="contact_us_form">
-			<form id="form1">
+			<form id="form1" method="POST" action="/__/forms/contact">
 				<div class="left_form">
 					<input type="text" name="fullname" placeholder="Your Full Name..." class="input"></input>
 					<br/>
 					<input type="text" name="email" placeholder="Your Email..." class="input"></input>
 					<br/>
 					<span class="input">Appointment Type</span><br/>
-					<select  class="input" placeholder="Choose from Options Below">
-					  <option value="cleaning">Teeth Cleaning</option>
-					  <option value="braces">Braces</option>
-					  <option value="invisalign">Invisalign</option>
-					  <option value="root">Root Canal</option>
+					<select name="type" class="input" placeholder="Choose from Options Below">
+					  <option value="Cleaning">Teeth Cleaning</option>
+					  <option value="Braces">Braces</option>
+					  <option value="Invisalign">Invisalign</option>
+					  <option value="Root">Root Canal</option>
 					</select><br/>
 					<span class="input">Preferred Doctor</span><br/>
-					<input type="radio" name="doctor" value="kazem">Dr. Kazem, General</input><br/>
-					<input type="radio" name="doctor" value="luu">Dr. Luu, Ortho</input>
+					<input type="radio" name="doctor" value="Dr. Kazem">Dr. Kazem, General</input><br/>
+					<input type="radio" name="doctor" value="Dr. Luu">Dr. Luu, Ortho</input>
 				</div>
 				<div class="right_form">
-					<span class="input">Preferred Time</span><br/>
-					<input type="radio" name="day" value="mon">Mon</input>
-					<input type="radio" name="day" value="tues">Tues</input>
-					<input type="radio" name="day" value="wed">Wed</input>
-					<input type="radio" name="day" value="thurs">Thurs</input>
-					<input type="radio" name="day" value="fri">Fri</input><br/>
+					<span name="day" class="input">Preferred Time</span><br/>
+					<input type="radio" name="day" value="Mon">Mon</input>
+					<input type="radio" name="day" value="Tues">Tues</input>
+					<input type="radio" name="day" value="Wed">Wed</input>
+					<input type="radio" name="day" value="Thurs">Thurs</input>
+					<input type="radio" name="day" value="Fri">Fri</input>
+					<input type="radio" name="day" value="Sat">Sat</input>
 
-					<input type="radio" name="day" value="sat">Sat</input>
-					<input type="radio" name="day" value="sun">Sun</input><br/>
-
-					<input type="textarea" style="height:100px; resize:none" class="input" placeholder="Comments/Aditional Information..."></input>
+					<textarea name="comment" type="textarea" class="input" placeholder="Comments/Aditional Information..."></textarea>
 				</div>
 			</form>
 			<form>
-			    <input value="Submit" type="button"
+			    <input class="submit_button" value="Submit" type="button"
 			        onclick="document.getElementById('form1').submit();"/>
 			</form>
 		</div>
@@ -436,7 +434,7 @@
         $.mobile.pushStateEnabled = false;
     });
 </script>
-<script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
-<script src="https://maps.googleapis.com/maps/api/js?v=3"></script>
+<!-- <script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+ --><script src="https://maps.googleapis.com/maps/api/js?v=3"></script>
 <script src="js/kazem.js"></script>
 </html>
