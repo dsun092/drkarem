@@ -546,12 +546,16 @@ a:active {
 
     div{
 		position: relative;
-	    top: 15%;
+	    top: 20%;
 	    margin: 0 auto;
 	    margin-bottom: 30px;
+	    padding-left: 30px;
+   		padding-right: 30px;
 	    @media screen and (max-width: $laptop) and (min-width: $mobile){
 			top: 20px;
 			margin-bottom:20px;
+			padding-left: 0px;
+   			padding-right: 0px;
 		}
 	}
 
