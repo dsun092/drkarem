@@ -1,12 +1,3 @@
-console.log("hello world");
-
-// $(window).bind('scroll', function () {
-//     if ($(window).scrollTop() > 50) {
-//         $('.main_menu').addClass('fixed');
-//     } else {
-//         $('.main_menu').removeClass('fixed');
-//     }
-// });
 $(document).bind('scrollstart', function () {
     if($('.main_menu').hasClass('fixed')){
         console.log('has');
@@ -22,6 +13,7 @@ $(document).bind('scrollstop', function () {
         $('.main_menu').removeClass('fixed');
     }
 });
+
 var map;
 var map2;
 var marker;
@@ -103,37 +95,69 @@ $(document).ready(function() {
       $('html, body').animate({ scrollTop: target.offset().top-60 }, 1000);
       return false;
   });
-
+var count = 0;
+  var hero_images = ['url(images/doctors/hero1.png)', 'url(images/doctors/hero2.png)', 'url(images/doctors/hero3.png)', 'url(images/doctors/hero4.png)', 'url(images/doctors/hero5.png)']
   $('#button1').on('click', function() {
-    $('.main_slider').css('background-image', 'url(images/doctors/hero1.png)');
+    $('.main_slider').css('background-image', hero_images[0]);
     $('.main_slider_header').removeClass('slider_text_right');
     $('.main_slider_desc').removeClass('slider_text_right');
     $('.main_slider_btn').removeClass('slider_text_right');
+    count = 0;
   })
   $('#button2').on('click', function() {
-      $('.main_slider').css('background-image', 'url(images/doctors/hero2.png)');
+      $('.main_slider').css('background-image', hero_images[1]);
       $('.main_slider_header').removeClass('slider_text_right');
       $('.main_slider_desc').removeClass('slider_text_right');
       $('.main_slider_btn').removeClass('slider_text_right');
+      count = 1;
   })
   $('#button3').on('click', function() {
-      $('.main_slider').css('background-image', 'url(images/doctors/hero3.png)');
+      $('.main_slider').css('background-image', hero_images[2]);
       $('.main_slider_header').removeClass('slider_text_right');
       $('.main_slider_desc').removeClass('slider_text_right');
       $('.main_slider_btn').removeClass('slider_text_right');
+      count = 2;
   })
   $('#button4').on('click', function() {
-      $('.main_slider').css('background-image', 'url(images/doctors/hero4.png)');
+      $('.main_slider').css('background-image', hero_images[3]);
       $('.main_slider_header').addClass('slider_text_right');
       $('.main_slider_desc').addClass('slider_text_right');
       $('.main_slider_btn').addClass('slider_text_right');
+      count = 3;
   })
   $('#button5').on('click', function() {
-      $('.main_slider').css('background-image', 'url(images/doctors/hero5.png)');
+      $('.main_slider').css('background-image', hero_images[4]);
       $('.main_slider_header').addClass('slider_text_right');
       $('.main_slider_desc').addClass('slider_text_right');
       $('.main_slider_btn').addClass('slider_text_right');
-  })
+      count = 4;
+  });
+
+function transition() {
+  $('.main_slider').css('background-image', hero_images[count]);
+  $('.main_slider').animate({ opacity: 1 }, { duration: 1000 });
+  if(count > 2){
+    $('.main_slider_header').addClass('slider_text_right');
+    $('.main_slider_desc').addClass('slider_text_right');
+    $('.main_slider_btn').addClass('slider_text_right');
+  }
+  else{
+    $('.main_slider_header').removeClass('slider_text_right');
+    $('.main_slider_desc').removeClass('slider_text_right');
+    $('.main_slider_btn').removeClass('slider_text_right');
+  }
+  count++;
+  if(count === 4){
+    count = 0;
+  }
+  setTimeout(function(){
+    $('.main_slider').animate({ opacity: 0 }, { duration: 1000 });
+  }, 5000)
+}
+setInterval(transition, 6000);
+
+
+
   var test1 = "The office is very clean and pleasant. The dentists are great and Dr. Kazem is the BEST. I trust him 180%! The staff are great and I always feel welcome. They always have a nice smile in their beautiful faces!";
   var test1ar = ":أنجلينا ل.: المكان نظيف ويبعث بالسرور ، الأطباء رائعون والدكتور كاظم هو الأفضل . أنا اثق به بنسبة ١٨٠٪ !!! فريق العمل رائع واشعر دائماً بالترحيب! وهم دائماً مبتسمون";
   var test1author="- Angelita L.";
