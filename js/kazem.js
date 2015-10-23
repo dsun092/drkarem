@@ -1,20 +1,39 @@
 var slider_text_one = "We’re committed to providing comprehensive dental care with state-of-the-art technology. We are a full service general, cosmetic, and orthodontic dental clinic. Please check out our full range of services here. Now with offices in Culver City and Irvine.";
 var slider_text_one_ar = "خبرة اكثر من عشرون عاما في غرب مدينة لوس انجلس ، التزم فريق العمل بتقديم أفضل الخدمات في طب الاسنان ضمن اجواء عمل مريحة و دافئة . مع اخر التقنيات والتكنولوجية الحديثة في طب الاسنان";
+var slider_btn_one = "MAKE AN APPOINTMENT";
+var slider_header_one = "Smile Brighter. Live Better.";
+var slider_header_ar_one = "ابتسامة جميلة لحياة اجمل";
+
 
 var slider_text_two ="With twenty years of experience serving the West Los Angeles area, our staff is committed to providing the best oral care all while creating a warm and inviting environment for our patients.";
 var slider_text_two_ar = "بخبرة لا تقل عن عشرون عاما في منطقة غرب لوس انجلوس، التزم فريق العمل بتقديم افضل الخدمات في طب الاسنان ضمن اجواء عمل تبعث على الدفء والترحيب للمرضى.";
+var slider_btn_two = "MEET OUR TEAM";
+var slider_header_two = "";
+var slider_header_ar_two = "";
 
 var slider_text_three = "We’re committed to providing comprehensive dental care with state-of-the-art technology to Southern California.";
 var slider_text_three_ar = "متواجدون في غرب لوس انجلوس منذ عام ١٩٩٦. ملتزمون بتقديم خدمة طبية شاملة باستخدام تكنولوجيا متطورة لجنوب كاليفورنيا. بامكانك الاطلاع على كامل خدماتنا هنا!";
+var slider_btn_three = "TOUR OUR OFFICE";
+var slider_header_three = "Serving West LA since 1996."
+var slider_header_ar_three="متواجدون في غرب لوس انجلوس منذ عام ١٩٩٦.";
 
 var slider_text_four ="Our office combines state-of-the-art technology with modern architecture in order to offer the best dental care in a friendly environment.";
 var slider_text_four_ar="يجمع مركزنا بين فن التصميم وفن العمارة الحديثة وذلك لتقديم افضل عناية لطب الاسنان في اجواء راقية.";
+var slider_btn_four = "VISIT US";
+var slider_header_four = "";
+var slider_header_ar_four = "";
 
 var slider_text_five = "With twenty years of experience serving the West Los Angeles area, our staff is committed to providing the best oral care all while creating a warm and inviting environment for our patients.";
 var slider_text_five_ar="بخبرة لا تقل عن عشرون عاما في منطقة غرب لوس انجلوس، التزم فريق العمل بتقديم افضل الخدمات في طب الاسنان ضمن اجواء عمل تبعث على الدفء والترحيب للمرضى.";
+var slider_btn_five = "MAKE AN APPOINTMENT";
+var slider_header_five = "";
+var slider_header_ar_five = "";
 
 var slider_text_array = [slider_text_one, slider_text_two, slider_text_three, slider_text_four, slider_text_five];
 var slider_text_array_ar =[slider_text_one_ar, slider_text_two_ar, slider_text_three_ar, slider_text_four_ar, slider_text_five_ar];
+var slider_btn_array = [slider_btn_one, slider_btn_two, slider_btn_three, slider_btn_four, slider_btn_five];
+var slider_header_array = [slider_header_one, slider_header_two, slider_header_three, slider_header_four, slider_header_five];
+var slider_header_array_ar = [slider_header_ar_one, slider_header_ar_two, slider_header_ar_three, slider_header_ar_four, slider_header_ar_five];
 
 $(document).bind('scroll', function () {
   if($(document).scrollTop() <= 50) {
@@ -133,8 +152,12 @@ var hero_images = ['url(images/doctors/hero1.jpg)', 'url(images/doctors/hero2.jp
     window.clearTimeout(timeout);
     $('.main_slider').animate({ opacity: 0 }, { duration: 1000 });
     setTimeout(function(){
+      $('#slider_btn').attr("href", "#contact_us");
       $('.slider_text').text(slider_text_array[0]);
       $('.slider_text_ar').text(slider_text_array_ar[0]);
+      $('.slider_header').text(slider_header_array[0]);
+      $('.slider_header_ar').text(slider_header_array_ar[0]);
+      $('.slider_button').text(slider_btn_array[0]);
       $('.main_slider').css('background-image', hero_images[0]);
       $('.main_slider_header').removeClass('slider_text_right');
       $('.main_slider_desc').removeClass('slider_text_right');
@@ -150,8 +173,12 @@ var hero_images = ['url(images/doctors/hero1.jpg)', 'url(images/doctors/hero2.jp
       window.clearTimeout(timeout);
       $('.main_slider').animate({ opacity: 0 }, { duration: 1000 });
       setTimeout(function(){
+        $('#slider_btn').attr("href", "#team");
         $('.slider_text').text(slider_text_array[1]);
         $('.slider_text_ar').text(slider_text_array_ar[1]);
+        $('.slider_header').text(slider_header_array[1]);
+        $('.slider_header_ar').text(slider_header_array_ar[1]);
+        $('.slider_button').text(slider_btn_array[1]);
         $('.main_slider').css('background-image', hero_images[1]);
         $('.main_slider_header').removeClass('slider_text_right');
         $('.main_slider_desc').removeClass('slider_text_right');
@@ -167,12 +194,16 @@ var hero_images = ['url(images/doctors/hero1.jpg)', 'url(images/doctors/hero2.jp
       window.clearTimeout(timeout);
       $('.main_slider').animate({ opacity: 0 }, { duration: 1000 });
       setTimeout(function(){
+        $('#slider_btn').attr("href", "#gallery");
         $('.slider_text').text(slider_text_array[2]);
         $('.slider_text_ar').text(slider_text_array_ar[2]);
+        $('.slider_header').text(slider_header_array[2]);
+        $('.slider_header_ar').text(slider_header_array_ar[2]);
+        $('.slider_button').text(slider_btn_array[2]);
         $('.main_slider').css('background-image', hero_images[2]);
-        $('.main_slider_header').removeClass('slider_text_right');
-        $('.main_slider_desc').removeClass('slider_text_right');
-        $('.main_slider_btn').removeClass('slider_text_right');
+        $('.main_slider_header').addClass('slider_text_right');
+        $('.main_slider_desc').addClass('slider_text_right');
+        $('.main_slider_btn').addClass('slider_text_right');
         $('.main_slider').animate({ opacity: 1 }, { duration: 1000 });
         interval = setInterval(transition, 6000);
         count = 2;
@@ -184,8 +215,12 @@ var hero_images = ['url(images/doctors/hero1.jpg)', 'url(images/doctors/hero2.jp
       window.clearTimeout(timeout);
       $('.main_slider').animate({ opacity: 0 }, { duration: 1000 });  
       setTimeout(function(){
+        $('#slider_btn').attr("href", "#visit");
         $('.slider_text').text(slider_text_array[3]);
         $('.slider_text_ar').text(slider_text_array_ar[3]);
+        $('.slider_header').text(slider_header_array[3]);
+        $('.slider_header_ar').text(slider_header_array_ar[3]);
+        $('.slider_button').text(slider_btn_array[3]);
         $('.main_slider').css('background-image', hero_images[3]);
         $('.main_slider_header').addClass('slider_text_right');
         $('.main_slider_desc').addClass('slider_text_right');
@@ -201,8 +236,12 @@ var hero_images = ['url(images/doctors/hero1.jpg)', 'url(images/doctors/hero2.jp
       window.clearTimeout(timeout);
       $('.main_slider').animate({ opacity: 0 }, { duration: 1000 });
       setTimeout(function(){
+        $('#slider_btn').attr("href", "#contact_us");
         $('.slider_text').text(slider_text_array[4]);
         $('.slider_text_ar').text(slider_text_array_ar[4]);
+        $('.slider_header').text(slider_header_array[4]);
+        $('.slider_header_ar').text(slider_header_array_ar[4]);
+        $('.slider_button').text(slider_btn_array[4]);
         $('.main_slider').css('background-image', hero_images[4]);
         $('.main_slider_header').addClass('slider_text_right');
         $('.main_slider_desc').addClass('slider_text_right');
@@ -217,10 +256,26 @@ var skip = false;
 function transition() {
   if(!skip){
     $('.slider_text').text(slider_text_array[count]);
-      $('.slider_text_ar').text(slider_text_array_ar[count]);
+    $('.slider_text_ar').text(slider_text_array_ar[count]);
+    $('.slider_header').text(slider_header_array[count]);
+    $('.slider_header_ar').text(slider_header_array_ar[count]);
+    $('.slider_button').text(slider_btn_array[count]);
     $('.main_slider').css('background-image', hero_images[count]);
     $('.main_slider').animate({ opacity: 1 }, { duration: 1000 });
-    if(count > 2){
+    if(count === 0){
+      $('#slider_btn').attr("href", "#contact_us");
+    }else if(count === 1){
+      $('#slider_btn').attr("href", "#team");
+    }else if(count === 2){
+      $('#slider_btn').attr("href", "#gallery");
+    }
+    else if(count === 4){
+      $('#slider_btn').attr("href", "#visit");
+    }
+    else if(count === 5){
+      $('#slider_btn').attr("href", "#contact_us");
+    }
+    if(count > 1){
       $('.main_slider_header').addClass('slider_text_right');
       $('.main_slider_desc').addClass('slider_text_right');
       $('.main_slider_btn').addClass('slider_text_right');
@@ -240,7 +295,7 @@ function transition() {
     skip = false;
   }, 5000)
 }
-//var interval = setInterval(transition, 6000);
+var interval = setInterval(transition, 6000);
 
 
 
@@ -265,6 +320,7 @@ function transition() {
   var test_author = [test1author, test2author, test3author, test4author];
   var test_text = [test1, test2, test3, test4];
   console.log(test_button);
+  var fading = false;
 
   $.each(test_button, function(item, value){
     $(value).on('click', function(){
@@ -273,14 +329,20 @@ function transition() {
       // $('.testimonial_text_ar').html(test_text_ar[item]);
       // $('.testimonial_author').html(test_author[item]);
       $('.testimonial_text').fadeOut('slow', function() {
+        if(english){
           $('.testimonial_text').text(test_text[item]).fadeIn('slow');
+        }
       });
       $('.testimonial_text_ar').fadeOut('slow', function() {
-          $('.testimonial_text_ar').text(test_text_ar[item]).fadeIn('slow');
+        if(!english){
+          $('.testimonial_text_ar').text(test_text_ar[item]).fadeIn('slow', function(){
+          });
+        }
       });
       $('.testimonial_author').fadeOut('slow', function() {
           $('.testimonial_author').text(test_author[item]).fadeIn('slow');
       });
+      console.log(english);
       if(english){
         $('.testimonial_text').css('display', 'inline');
         $('.testimonial_text_ar').css('display', 'none');
