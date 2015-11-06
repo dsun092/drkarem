@@ -191,10 +191,10 @@ a:active {
 
 .main_slider_desc {
   color: white;
-  font-size: 30px;
+  font-size: 36px;
   line-height: 36px;
   font-family: 'Roboto';
-  font-weight: 100;
+  font-weight: 500;
   position: absolute;
   top: 35%;
   margin-left: 13%;
@@ -816,9 +816,10 @@ a:active {
   top: 20px; }
 
 .submit_button {
-  padding: 10px 20px;
+  padding: 10px 30px !important;
   border: 1px solid #929292;
-  background-color: #fff; }
+  background-color: #fff;
+  padding-left: 0px; }
   .submit_button:hover {
     background-color: #DDD;
     cursor: pointer; }

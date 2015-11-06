@@ -6,7 +6,7 @@
       "from": "drkazemdentistry@gmail.com",
       "replyTo": "{{fullname}} <{{email}}>",
       "subject": "Appointment Request For {{fullname}}",
-      "html": "<b>Name:</b> {{fullname}} <br/> <b>Appointment Type:</b> {{type}} <br/> <b>Preferred Doctor: </b> {{doctor}} <br/> <b>Day</b>: {{day}} <br/> <br/> <b>Additional Comment: </b> {{comment}}",
+      "html": "<b>Name:</b> {{fullname}} <br/> <b>Phone Number:</b> {{phone}} <br/> <b>Appointment Type:</b> {{type}} <br/> <b>Preferred Location: </b> {{location}} <br/> <b>Day</b>: {{day}} <br/> <br/> <b>Additional Comment: </b> {{comment}}",
       "text": "Name: {{fullname}}",
       "success": "/",
       "failure": "/contact-failure"
