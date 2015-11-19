@@ -103,7 +103,7 @@ a:active {
 	@media screen and (min-width: $laptop) and (min-width: $mobile){
     	margin-left: 0%;
     }
-    @media screen and (max-width: $ipad){
+    @media screen and (max-device-width: $ipad){
     	min-width: 1000px;
     }
 }
@@ -118,7 +118,7 @@ a:active {
     -o-transition: all .5s ease;
     -ms-transition: all .5s ease;
     transition: all .5s ease;
-    @media screen and (max-width: $laptop) and (min-width: $mobile){
+    @media screen and (max-device-width: $laptop) and (min-device-width: $mobile){
     	margin-left: 0%;
     }
 }
@@ -146,7 +146,7 @@ a:active {
     @media screen and (max-device-width: $mobile){
 		display: none;
 	}
-	@media screen and (max-width: $laptop) and (min-width: $mobile){
+	@media screen and (max-device-width: $laptop) and (min-device-width: $mobile){
 		width: 55%;
 		right: 2%
 	}
@@ -320,6 +320,11 @@ a:active {
 }
 .services>a{
 	display: flex;
+	display: -webkit-box;      /* OLD - iOS 6-, Safari 3.1-6 */
+  	display: -moz-box;         /* OLD - Firefox 19- (buggy but mostly works) */
+  	display: -ms-flexbox;      /* TWEENER - IE 10 */
+  	display: -webkit-flex;     /* NEW - Chrome */
+	-webkit-justify-content: space-around;
     margin-left: 13%;
     justify-content: space-between;
     margin-right: 13%;
@@ -333,7 +338,7 @@ a:active {
 	    margin: 0 auto;
 	    text-align: center;
     }
-    @media screen and (max-width: $laptop) and (min-width: $mobile){
+    @media screen and (max-device-width: $laptop) and (min-device-width: $mobile){
 	    display: block;
 	    /* overflow: auto; */
 	    width: 100%;
@@ -352,7 +357,7 @@ a:active {
 		    font-size:30px;
 	    }
     }
-    @media screen and (max-width: $laptop) and (min-width: $mobile){
+    @media screen and (max-device-width: $laptop) and (min-device-width: $mobile){
 	    width: 50%;
     	float: left;
     	.service_row{
@@ -364,7 +369,7 @@ a:active {
 	@media screen and (max-device-width: $mobile){
 	    margin-bottom:60px;
     }
-    @media screen and (max-width: $laptop) and (min-width: $mobile){
+    @media screen and (max-device-width: $laptop) and (min-device-width: $mobile){
 	    margin-bottom:60px;
     }
 }
@@ -375,10 +380,15 @@ a:active {
 	}
 	color:#76BD22;
 	font-size:36px;
-	 @media screen and (max-width: $laptop) and (min-width: $mobile){
+	 @media screen and (max-device-width: $laptop) and (min-device-width: $mobile){
 	    div{
 	    	text-align:center;
 	    }
+    }
+     @media screen and (max-device-width: $mobile){
+    	div{
+    		text-align:center;
+    	}
     }
 
 }
@@ -390,10 +400,15 @@ a:active {
 	div{
 		text-align:right;
 	}
-	 @media screen and (max-width: $laptop) and (min-width: $mobile){
+	 @media screen and (max-device-width: $laptop) and (min-device-width: $mobile){
 	    div{
 	    	text-align:center;
 	    }
+    }
+    @media screen and (max-device-width: $mobile){
+    	div{
+    		text-align:center;
+    	}
     }
 }
 .our_team{
@@ -427,14 +442,14 @@ a:active {
     padding-top:30px;
     padding-bottom:60px;
 	width:100%;
-	@media screen and(min-width: "1440px"){
+	@media screen and(min-device-width: "1440px"){
 		width: 80%;
 		min-width: 1440px;
 	}
-	@media screen and (max-width: "1440px") and (min-width: $ipad){
+	@media screen and (max-device-width: "1440px") and (min-device-width: $ipad){
 	    width: 70%;
     }
-    @media screen and (max-width: $ipad) and (min-width: $mobile){
+    @media screen and (max-device-width: $ipad) and (min-device-width: $mobile){
 	    width: 100%;
     }
 }
@@ -606,7 +621,7 @@ a:active {
     top: 0px;
     width: 33.22%;
     height: 50%;
-    @media screen and (max-width: $laptop) and (min-width: $mobile){
+    @media screen and (max-device-width: $laptop) and (min-device-width: $mobile){
 		font-size: 1em;
 	}
 
@@ -617,7 +632,7 @@ a:active {
 	    margin-bottom: 30px;
 	    padding-left: 30px;
    		padding-right: 30px;
-	    @media screen and (max-width: $laptop) and (min-width: $mobile){
+	    @media screen and (max-device-width: $laptop) and (min-device-width: $mobile){
 			top: 20px;
 			margin-bottom:20px;
 			padding-left: 10px;
@@ -638,7 +653,7 @@ a:active {
 			font-size:1.2em;
 		}
 	}
-	@media screen and (max-width: $ipad) and (min-width: $mobile){
+	@media screen and (max-device-width: $ipad) and (min-device-width: $mobile){
 		.office_head{
 			font-size:1.2em;
 		}
@@ -825,7 +840,7 @@ a:active {
 		-webkit-justify-content: space-around;
 		justify-content:space-around;
 	}
-	@media screen and (max-width: $laptop) and (min-width: $mobile){
+	@media screen and (max-device-width: $laptop) and (min-device-width: $mobile){
 		margin-left: 6%;
 		margin-right: 6%;
 	}
@@ -838,7 +853,7 @@ a:active {
 .loc_city{
 	font-size: 36px;
 	color: #76bd22;
-	@media screen and (max-width: $laptop) and (min-width: $mobile){
+	@media screen and (max-device-width: $laptop) and (min-device-width: $mobile){
 		font-size: 1.5em;
 	}
 }
@@ -847,7 +862,7 @@ a:active {
 	margin-top: 0px;
 	font-family: 'Roboto';
 	font-weight: 100;
-	@media screen and (max-width: $laptop) and (min-width: $mobile){
+	@media screen and (max-device-width: $laptop) and (min-device-width: $mobile){
 		font-size: 1em;
 	}
 }
@@ -866,7 +881,7 @@ a:active {
 	font-size:30px;
 	font-family: 'Roboto';
 	font-weight: 100;
-	@media screen and (max-width: $laptop) and (min-width: $mobile){
+	@media screen and (max-device-width: $laptop) and (min-device-width: $mobile){
 		font-size: 1.5em;
 	}
 }

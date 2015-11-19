@@ -92,7 +92,7 @@ a:active {
   @media screen and (min-width: 1350px) and (min-width: 420px) {
     .main_menu {
       margin-left: 0%; } }
-  @media screen and (max-width: 1000px) {
+  @media screen and (max-device-width: 1000px) {
     .main_menu {
       min-width: 1000px; } }
 
@@ -106,7 +106,7 @@ a:active {
   -o-transition: all .5s ease;
   -ms-transition: all .5s ease;
   transition: all .5s ease; }
-  @media screen and (max-width: 1350px) and (min-width: 420px) {
+  @media screen and (max-device-width: 1350px) and (min-device-width: 420px) {
     .main_menu .main_logo {
       margin-left: 0%; } }
 
@@ -132,7 +132,7 @@ a:active {
   @media screen and (max-device-width: 420px) {
     .main_menu .top_navi {
       display: none; } }
-  @media screen and (max-width: 1350px) and (min-width: 420px) {
+  @media screen and (max-device-width: 1350px) and (min-device-width: 420px) {
     .main_menu .top_navi {
       width: 55%;
       right: 2%; } }
@@ -305,6 +305,15 @@ a:active {
 
 .services > a {
   display: flex;
+  display: -webkit-box;
+  /* OLD - iOS 6-, Safari 3.1-6 */
+  display: -moz-box;
+  /* OLD - Firefox 19- (buggy but mostly works) */
+  display: -ms-flexbox;
+  /* TWEENER - IE 10 */
+  display: -webkit-flex;
+  /* NEW - Chrome */
+  -webkit-justify-content: space-around;
   margin-left: 13%;
   justify-content: space-between;
   margin-right: 13%;
@@ -318,7 +327,7 @@ a:active {
       width: 100%;
       margin: 0 auto;
       text-align: center; } }
-  @media screen and (max-width: 1350px) and (min-width: 420px) {
+  @media screen and (max-device-width: 1350px) and (min-device-width: 420px) {
     .services > a {
       display: block;
       /* overflow: auto; */
@@ -335,7 +344,7 @@ a:active {
       float: left; }
       .service_column1 .service_row, .service_column2 .service_row, .service_column3 .service_row, .service_column4 .service_row {
         font-size: 30px; } }
-  @media screen and (max-width: 1350px) and (min-width: 420px) {
+  @media screen and (max-device-width: 1350px) and (min-device-width: 420px) {
     .service_column1, .service_column2, .service_column3, .service_column4 {
       width: 50%;
       float: left; }
@@ -345,7 +354,7 @@ a:active {
 @media screen and (max-device-width: 420px) {
   .service_column1, .service_column2 {
     margin-bottom: 60px; } }
-@media screen and (max-width: 1350px) and (min-width: 420px) {
+@media screen and (max-device-width: 1350px) and (min-device-width: 420px) {
   .service_column1, .service_column2 {
     margin-bottom: 60px; } }
 
@@ -354,7 +363,10 @@ a:active {
   font-size: 36px; }
   .service_header div {
     text-align: right; }
-  @media screen and (max-width: 1350px) and (min-width: 420px) {
+  @media screen and (max-device-width: 1350px) and (min-device-width: 420px) {
+    .service_header div {
+      text-align: center; } }
+  @media screen and (max-device-width: 420px) {
     .service_header div {
       text-align: center; } }
 
@@ -365,7 +377,10 @@ a:active {
   font-weight: 100; }
   .service_row div {
     text-align: right; }
-  @media screen and (max-width: 1350px) and (min-width: 420px) {
+  @media screen and (max-device-width: 1350px) and (min-device-width: 420px) {
+    .service_row div {
+      text-align: center; } }
+  @media screen and (max-device-width: 420px) {
     .service_row div {
       text-align: center; } }
 
@@ -400,14 +415,14 @@ a:active {
   padding-top: 30px;
   padding-bottom: 60px;
   width: 100%; }
-  @media screen and (min-width: 1440px) {
+  @media screen and (min-device-width: 1440px) {
     .our_images_container {
       width: 80%;
       min-width: 1440px; } }
-  @media screen and (max-width: 1440px) and (min-width: 1000px) {
+  @media screen and (max-device-width: 1440px) and (min-device-width: 1000px) {
     .our_images_container {
       width: 70%; } }
-  @media screen and (max-width: 1000px) and (min-width: 420px) {
+  @media screen and (max-device-width: 1000px) and (min-device-width: 420px) {
     .our_images_container {
       width: 100%; } }
 
@@ -575,7 +590,7 @@ a:active {
   top: 0px;
   width: 33.22%;
   height: 50%; }
-  @media screen and (max-width: 1350px) and (min-width: 420px) {
+  @media screen and (max-device-width: 1350px) and (min-device-width: 420px) {
     .office_image_main_text {
       font-size: 1em; } }
   .office_image_main_text div {
@@ -585,7 +600,7 @@ a:active {
     margin-bottom: 30px;
     padding-left: 30px;
     padding-right: 30px; }
-    @media screen and (max-width: 1350px) and (min-width: 420px) {
+    @media screen and (max-device-width: 1350px) and (min-device-width: 420px) {
       .office_image_main_text div {
         top: 20px;
         margin-bottom: 20px;
@@ -601,7 +616,7 @@ a:active {
         font-size: 2em; }
       .office_image_main_text .office_desc {
         font-size: 1.2em; } }
-  @media screen and (max-width: 1000px) and (min-width: 420px) {
+  @media screen and (max-device-width: 1000px) and (min-device-width: 420px) {
     .office_image_main_text .office_head {
       font-size: 1.2em; }
     .office_image_main_text .office_desc {
@@ -796,7 +811,7 @@ a:active {
       margin-right: 10px;
       -webkit-justify-content: space-around;
       justify-content: space-around; } }
-  @media screen and (max-width: 1350px) and (min-width: 420px) {
+  @media screen and (max-device-width: 1350px) and (min-device-width: 420px) {
     .location_text a {
       margin-left: 6%;
       margin-right: 6%; } }
@@ -808,7 +823,7 @@ a:active {
 .loc_city {
   font-size: 36px;
   color: #76bd22; }
-  @media screen and (max-width: 1350px) and (min-width: 420px) {
+  @media screen and (max-device-width: 1350px) and (min-device-width: 420px) {
     .loc_city {
       font-size: 1.5em; } }
 
@@ -817,7 +832,7 @@ a:active {
   margin-top: 0px;
   font-family: 'Roboto';
   font-weight: 100; }
-  @media screen and (max-width: 1350px) and (min-width: 420px) {
+  @media screen and (max-device-width: 1350px) and (min-device-width: 420px) {
     .loc_text, .office_text {
       font-size: 1em; } }
 
@@ -835,7 +850,7 @@ a:active {
   font-size: 30px;
   font-family: 'Roboto';
   font-weight: 100; }
-  @media screen and (max-width: 1350px) and (min-width: 420px) {
+  @media screen and (max-device-width: 1350px) and (min-device-width: 420px) {
     .office_hours {
       font-size: 1.5em; } }
 
