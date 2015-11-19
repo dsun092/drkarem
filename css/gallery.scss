@@ -16,13 +16,24 @@ $ipad: "1000px";
     top: 30px;
     width: 100%;
     display: flex;
+    display: -webkit-box;      /* OLD - iOS 6-, Safari 3.1-6 */
+    display: -moz-box;         /* OLD - Firefox 19- (buggy but mostly works) */
+    display: -ms-flexbox;      /* TWEENER - IE 10 */
+    display: -webkit-flex;     /* NEW - Chrome */
+  -webkit-justify-content: space-around;
     justify-content: space-around;
     margin-bottom: 60px;
     border-bottom: 1px solid #ddd;
+    @media screen and (max-device-width: $mobile){
+      display:block;
+  }
 }
 .image_col{
     width: 24.8%;
     height: auto;
+    @media screen and (max-device-width: $mobile){
+      width: 100%;
+    }
 }
 .image_col>div{
     overflow: hidden;
@@ -52,6 +63,10 @@ $ipad: "1000px";
   height: 100%;
   left: 0;
   display: flex;
+  display: -webkit-box;      /* OLD - iOS 6-, Safari 3.1-6 */
+  display: -moz-box;         /* OLD - Firefox 19- (buggy but mostly works) */
+  display: -ms-flexbox;      /* TWEENER - IE 10 */
+  display: -webkit-flex;     /* NEW - Chrome */
   overflow: auto;
   padding: 1.5em;
   position: fixed;
