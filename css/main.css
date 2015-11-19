@@ -243,8 +243,8 @@ a:active {
   /* NEW - Chrome */
   -webkit-justify-content: space-around;
   justify-content: space-around;
-  margin-left: 50%;
-  margin-right: 50%; }
+  margin-left: 45%;
+  margin-right: 45%; }
 
 .slider_buttons div {
   height: 20px;
