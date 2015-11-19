@@ -21,7 +21,6 @@
   height: auto; }
 
 .image_col > div {
-  max-height: 500px;
   overflow: hidden; }
 
 .image_gallery img {
