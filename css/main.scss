@@ -823,24 +823,20 @@ a:active {
 }
 .location_text>a{
 	position:relative;
-	margin-top:60px;
-	margin-bottom:60px;
+	padding-top:60px;
+	padding-bottom:60px;
 	display: flex;
 	display: -webkit-box;      /* OLD - iOS 6-, Safari 3.1-6 */
   	display: -moz-box;         /* OLD - Firefox 19- (buggy but mostly works) */
   	display: -ms-flexbox;      /* TWEENER - IE 10 */
   	display: -webkit-flex;     /* NEW - Chrome */
 	-webkit-justify-content: space-between;
-    margin-left: 13%;
     justify-content: space-between;
-    margin-right: 13%;
     @media screen and (max-device-width: $mobile){
-		margin-left:40px !important;
-		margin-right:40px !important;
 		flex-flow: row wrap;
 		-webkit-flex-flow: row wrap;
-		-webkit-justify-content: space-around;
-		justify-content:space-around;
+		-webkit-justify-content: space-between;
+		justify-content:space-between;
 		width: 100%;
 	}
 	@media screen and (max-device-width: $laptop) and (min-device-width: $mobile){
@@ -850,6 +846,8 @@ a:active {
 }
 .column{
 	width: 20%;
+	margin-left:auto;
+	margin-right:auto;
 	@media screen and (max-device-width: $mobile){
 		width: 40%;
 		margin-bottom: 20px;
@@ -881,6 +879,8 @@ a:active {
 }
 .column_office{
 	width: 20%;
+	margin-left:auto;
+	margin-right:auto;
 	@media screen and (max-device-width: $mobile){
 		width: 40%;
 		margin-bottom: 20px;
