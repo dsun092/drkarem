@@ -788,7 +788,7 @@ a:active {
   -webkit-flex-flow: row wrap;
   justify-content: space-between; }
 
-.location_text > a {
+.loc_text_container {
   position: relative;
   padding-top: 60px;
   padding-bottom: 60px;
@@ -804,14 +804,14 @@ a:active {
   -webkit-justify-content: space-between;
   justify-content: space-between; }
   @media screen and (max-device-width: 420px) {
-    .location_text > a {
+    .loc_text_container {
       flex-flow: row wrap;
       -webkit-flex-flow: row wrap;
       -webkit-justify-content: space-between;
       justify-content: space-between;
       width: 100%; } }
   @media screen and (max-device-width: 1350px) and (min-device-width: 420px) {
-    .location_text > a {
+    .loc_text_container {
       margin-left: 6%;
       margin-right: 6%; } }
 
