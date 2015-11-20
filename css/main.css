@@ -170,6 +170,8 @@ a:active {
   background-image: url("http://development.drkazem.divshot.io/images/doctors/hero1.jpg");
   background-repeat: no-repeat;
   background-position: 50% 50%;
+  background-position-x: 50%;
+  background-position-y: 50%;
   background-attachment: fixed;
   height: 855px;
   position: relative;
@@ -679,9 +681,6 @@ a:active {
   /* margin: 0 auto; */
   width: 100%;
   display: flex; }
-  @media screen and (max-device-width: 420px) {
-    .test_buttons_container {
-      display: none; } }
 
 .test_buttons {
   width: 10%;
@@ -789,7 +788,8 @@ a:active {
   -webkit-flex-flow: row wrap;
   justify-content: space-between; }
 
-.location_text a {
+.location_text > a {
+  position: relative;
   margin-top: 60px;
   margin-bottom: 60px;
   display: flex;
@@ -806,19 +806,25 @@ a:active {
   justify-content: space-between;
   margin-right: 13%; }
   @media screen and (max-device-width: 420px) {
-    .location_text a {
-      margin-left: 10px;
-      margin-right: 10px;
+    .location_text > a {
+      margin-left: 40px !important;
+      margin-right: 40px !important;
+      flex-flow: row wrap;
+      -webkit-flex-flow: row wrap;
       -webkit-justify-content: space-around;
-      justify-content: space-around; } }
+      justify-content: space-around;
+      width: 100%; } }
   @media screen and (max-device-width: 1350px) and (min-device-width: 420px) {
-    .location_text a {
+    .location_text > a {
       margin-left: 6%;
       margin-right: 6%; } }
 
 .column {
-  position: relative;
   width: 20%; }
+  @media screen and (max-device-width: 420px) {
+    .column {
+      width: 40%;
+      margin-bottom: 20px; } }
 
 .loc_city {
   font-size: 36px;
@@ -843,8 +849,11 @@ a:active {
   font-weight: 100; }
 
 .column_office {
-  position: relative;
   width: 20%; }
+  @media screen and (max-device-width: 420px) {
+    .column_office {
+      width: 40%;
+      margin-bottom: 20px; } }
 
 .office_hours {
   font-size: 30px;

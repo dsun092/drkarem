@@ -64,6 +64,7 @@ map = new google.maps.Map(document.getElementById('map1'), {
   center: {lat: 34.014440, lng: -118.407727},
   zoom: 18,
   scaleControl: false,
+  draggable: false,
   navigationControl: false,
 });
 
@@ -71,6 +72,7 @@ map2 = new google.maps.Map(document.getElementById('map2'), {
   center: {lat: 33.665279, lng: -117.763177},
   zoom: 18,
   scaleControl: false,
+  draggable: false,
   navigationControl: false,
 });
 
