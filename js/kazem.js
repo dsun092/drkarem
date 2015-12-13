@@ -126,15 +126,6 @@ $('#arabic').click(function(){
   $('.doc_text').css({'text-align': 'right'});
 })
 
-$.ajax({
-  url: "text.json",
-  success: function(resp){
-    console.log(resp);
-  },
-  error: function(fun, status, error){
-    console.log(error);
-  }
-});
 
 $(document).ready(function() {
   $('a[href^="#"]').click(function() {
