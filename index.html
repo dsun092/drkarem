@@ -240,7 +240,7 @@
 	<div class="our_office">
 		<a name="gallery">
 		<div class="our_office_row">
-			<div class="office_pic">
+			<!-- <div class="office_pic">
 				<div class="office_image_main_text" style="opacity: 1; background-color: #FFF">
 					<div class="office_head"><span class="en">Tour Our Office</span></div>
 					<div class="office_head"><span class="ar">Tour Our Office</span></div>
@@ -252,7 +252,7 @@
 						<span style="cursor: pointer;">Gallery</span>
 					</div>
 				</div>
-			</div>
+			</div> -->
 			<div class="office_pic two">
 				<div class="office_image_text">
 					<div class="office_header"><span class="en">Back Rooms</span></div>
@@ -377,7 +377,7 @@
 		</div>
 
 		<div class="contact_us_form">
-			<form id="form1" method="POST" action="/__/forms/contact">
+			<form id="form1">
 				<div class="left_form">
 					<input type="text" name="fullname" placeholder="Your Full Name..." class="input"></input>
 					<br/>
@@ -408,7 +408,7 @@
 
 					<textarea name="comment" type="textarea" class="input" placeholder="Comments/Aditional Information..."></textarea>
 					<input class="submit_button" value="Submit" type="button"
-			        onclick="document.getElementById('form1').submit();"/>
+			        onclick="submitEmail()"/>
 					</div>
 				</form>
 			</div>
@@ -446,6 +446,7 @@
 	</div>
 
 </body>
+<script src="https://cdn.firebase.com/js/client/2.3.2/firebase.js"></script>
 <script type="text/javascript" src="js/jquery-1.9.1.min.js"></script>
 <script>
     $(document).bind('mobileinit',function(){
@@ -455,4 +456,5 @@
 <!-- <script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
  --><script src="https://maps.googleapis.com/maps/api/js?v=3.21"></script>
 <script src="js/kazem.js"></script>
+<script src="js/submitEmail.js"></script>
 </html>

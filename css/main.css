@@ -89,10 +89,10 @@ a:active {
   -webkit-transition: height .5s, width .5s, font-size .5s, left .5s ease;
   -o-transition: height .5s, width .5s, font-size .5s, left .5s ease;
   transition: height .5s, width .5s, font-size .5s, left .5s ease; }
-  @media screen and (min-width: 1350px) and (min-width: 420px) {
+  @media screen and (min-width: 1350px) and (min-device-width: 420px) {
     .main_menu {
       margin-left: 0%; } }
-  @media screen and (max-device-width: 1000px) {
+  @media screen and (max-width: 1000px) {
     .main_menu {
       min-width: 1000px; } }
 
@@ -106,7 +106,7 @@ a:active {
   -o-transition: all .5s ease;
   -ms-transition: all .5s ease;
   transition: all .5s ease; }
-  @media screen and (max-device-width: 1350px) and (min-device-width: 420px) {
+  @media screen and (max-width: 1350px) and (min-device-width: 420px) {
     .main_menu .main_logo {
       margin-left: 0%; } }
 
@@ -132,10 +132,10 @@ a:active {
   @media screen and (max-device-width: 420px) {
     .main_menu .top_navi {
       display: none; } }
-  @media screen and (max-device-width: 1350px) and (min-device-width: 420px) {
+  @media screen and (max-width: 1350px) and (min-device-width: 420px) {
     .main_menu .top_navi {
       width: 55%;
-      right: 2%; } }
+      right: 3%; } }
 
 .top_navi div {
   display: inline-block; }
@@ -167,7 +167,7 @@ a:active {
 
 .main_slider {
   background-size: cover;
-  background-image: url("http://development.drkazem.divshot.io/images/doctors/hero1.jpg");
+  background-image: url("https://drkazem.firebaseapp.com/images/doctors/hero1.jpg");
   background-repeat: no-repeat;
   background-position: 50% 50%;
   background-position-x: 50%;
@@ -233,7 +233,7 @@ a:active {
   position: absolute;
   bottom: 60px;
   margin: 0 auto;
-  width: 10%;
+  width: 100px;
   display: flex;
   display: -webkit-box;
   /* OLD - iOS 6-, Safari 3.1-6 */
@@ -329,7 +329,7 @@ a:active {
       width: 100%;
       margin: 0 auto;
       text-align: center; } }
-  @media screen and (max-device-width: 1350px) and (min-device-width: 420px) {
+  @media screen and (max-width: 1350px) and (min-device-width: 420px) {
     .services > a {
       display: block;
       /* overflow: auto; */
@@ -346,7 +346,7 @@ a:active {
       float: left; }
       .service_column1 .service_row, .service_column2 .service_row, .service_column3 .service_row, .service_column4 .service_row {
         font-size: 30px; } }
-  @media screen and (max-device-width: 1350px) and (min-device-width: 420px) {
+  @media screen and (max-width: 1350px) and (min-device-width: 420px) {
     .service_column1, .service_column2, .service_column3, .service_column4 {
       width: 50%;
       float: left; }
@@ -356,7 +356,7 @@ a:active {
 @media screen and (max-device-width: 420px) {
   .service_column1, .service_column2 {
     margin-bottom: 60px; } }
-@media screen and (max-device-width: 1350px) and (min-device-width: 420px) {
+@media screen and (max-width: 1350px) and (min-device-width: 420px) {
   .service_column1, .service_column2 {
     margin-bottom: 60px; } }
 
@@ -365,7 +365,7 @@ a:active {
   font-size: 36px; }
   .service_header div {
     text-align: right; }
-  @media screen and (max-device-width: 1350px) and (min-device-width: 420px) {
+  @media screen and (max-width: 1350px) and (min-device-width: 420px) {
     .service_header div {
       text-align: center; } }
   @media screen and (max-device-width: 420px) {
@@ -379,7 +379,7 @@ a:active {
   font-weight: 100; }
   .service_row div {
     text-align: right; }
-  @media screen and (max-device-width: 1350px) and (min-device-width: 420px) {
+  @media screen and (max-width: 1350px) and (min-device-width: 420px) {
     .service_row div {
       text-align: center; } }
   @media screen and (max-device-width: 420px) {
@@ -417,14 +417,14 @@ a:active {
   padding-top: 30px;
   padding-bottom: 60px;
   width: 100%; }
-  @media screen and (min-device-width: 1440px) {
+  @media screen and (min-width: 1440px) {
     .our_images_container {
       width: 80%;
       min-width: 1440px; } }
-  @media screen and (max-device-width: 1440px) and (min-device-width: 1000px) {
+  @media screen and (max-width: 1440px) and (min-width: 1000px) {
     .our_images_container {
       width: 70%; } }
-  @media screen and (max-device-width: 1000px) and (min-device-width: 420px) {
+  @media screen and (max-width: 1000px) and (min-device-width: 420px) {
     .our_images_container {
       width: 100%; } }
 
@@ -462,22 +462,22 @@ a:active {
 
 .drkazem {
   background-size: cover;
-  background-image: url("http://development.drkazem.divshot.io/images/doctors/Dr-Baker.png");
+  background-image: url("https://drkazem.firebaseapp.com/images/doctors/Dr-Baker.png");
   background-repeat: no-repeat; }
 
 .dralina {
   background-size: cover;
-  background-image: url("http://development.drkazem.divshot.io/images/doctors/Dr-Alina.png");
+  background-image: url("https://drkazem.firebaseapp.com/images/doctors/Dr-Alina.png");
   background-repeat: no-repeat; }
 
 .drliu {
   background-size: cover;
-  background-image: url("http://development.drkazem.divshot.io/images/doctors/Dr-Liu.png");
+  background-image: url("https://drkazem.firebaseapp.com/images/doctors/Dr-Liu.png");
   background-repeat: no-repeat; }
 
 .mrsbaker {
   background-size: cover;
-  background-image: url("http://development.drkazem.divshot.io/images/doctors/Jenan-Baker.png");
+  background-image: url("https://drkazem.firebaseapp.com/images/doctors/Jenan-Baker.png");
   background-repeat: no-repeat; }
 
 .our_team_images img {
@@ -525,6 +525,7 @@ a:active {
 
 .our_office_row {
   width: 100%;
+  /*height: 80vh;*/
   /* float: left; */
   display: flex;
   display: -webkit-box;
@@ -538,32 +539,33 @@ a:active {
   -webkit-justify-content: space-around;
   -webkit-flex-flow: row wrap;
   justify-content: space-around;
-  flex-flow: row wrap; }
+  flex-flow: column wrap; }
   .our_office_row .two {
-    background-image: url("http://development.drkazem.divshot.io/images/doctors/image8.JPG");
+    background-image: url("https://drkazem.firebaseapp.com/images/doctors/image8.JPG");
     background-size: cover;
     background-repeat: no-repeat; }
   .our_office_row .three {
-    background-image: url("http://development.drkazem.divshot.io/images/doctors/image5.JPG");
+    background-image: url("https://drkazem.firebaseapp.com/images/doctors/image5.JPG");
     background-size: cover;
     background-repeat: no-repeat; }
   .our_office_row .four {
-    background-image: url("http://development.drkazem.divshot.io/images/doctors/image14.JPG");
+    background-image: url("https://drkazem.firebaseapp.com/images/doctors/image14.JPG");
     background-size: cover;
     background-repeat: no-repeat; }
   .our_office_row .five {
-    background-image: url("http://development.drkazem.divshot.io/images/doctors/image3.JPG");
+    background-image: url("https://drkazem.firebaseapp.com/images/doctors/image3.JPG");
     background-size: cover;
     background-repeat: no-repeat; }
   .our_office_row .six {
-    background-image: url("http://development.drkazem.divshot.io/images/doctors/image12.JPG");
+    background-image: url("https://drkazem.firebaseapp.com/images/doctors/image12.JPG");
     background-size: cover;
     background-repeat: no-repeat; }
 
 .office_pic {
+  background-attachment: fixed;
   background-position: 50% 50%;
-  width: 33%;
-  height: 50%;
+  width: 100%;
+  height: 800px;
   border: 1px solid #ddD;
   -webkit-transition: all .5s ease-in-out;
   -moz-transition: all .5s ease-in-out;
@@ -590,9 +592,8 @@ a:active {
   color: #464646;
   position: absolute;
   top: 0px;
-  width: 33.22%;
-  height: 50%; }
-  @media screen and (max-device-width: 1350px) and (min-device-width: 420px) {
+  width: 33.22%; }
+  @media screen and (max-width: 1350px) and (min-device-width: 420px) {
     .office_image_main_text {
       font-size: 1em; } }
   .office_image_main_text div {
@@ -602,7 +603,7 @@ a:active {
     margin-bottom: 30px;
     padding-left: 30px;
     padding-right: 30px; }
-    @media screen and (max-device-width: 1350px) and (min-device-width: 420px) {
+    @media screen and (max-width: 1350px) and (min-device-width: 420px) {
       .office_image_main_text div {
         top: 20px;
         margin-bottom: 20px;
@@ -683,7 +684,7 @@ a:active {
   display: flex; }
 
 .test_buttons {
-  width: 10%;
+  width: 100px;
   margin: 0 auto;
   display: flex;
   display: -webkit-box;
@@ -774,19 +775,7 @@ a:active {
 .location_text {
   width: 100%;
   position: relative;
-  border-bottom: 1px solid #DDD;
-  display: flex;
-  display: -webkit-box;
-  /* OLD - iOS 6-, Safari 3.1-6 */
-  display: -moz-box;
-  /* OLD - Firefox 19- (buggy but mostly works) */
-  display: -ms-flexbox;
-  /* TWEENER - IE 10 */
-  display: -webkit-flex;
-  /* NEW - Chrome */
-  -webkit-justify-content: space-between;
-  -webkit-flex-flow: row wrap;
-  justify-content: space-between; }
+  border-bottom: 1px solid #DDD; }
 
 .loc_text_container {
   position: relative;
@@ -802,15 +791,15 @@ a:active {
   display: -webkit-flex;
   /* NEW - Chrome */
   -webkit-justify-content: space-between;
+  justify-content: space-between;
+  flex-flow: row wrap;
+  -webkit-flex-flow: row wrap;
+  -webkit-justify-content: space-between;
   justify-content: space-between; }
   @media screen and (max-device-width: 420px) {
     .loc_text_container {
-      flex-flow: row wrap;
-      -webkit-flex-flow: row wrap;
-      -webkit-justify-content: space-between;
-      justify-content: space-between;
       width: 100%; } }
-  @media screen and (max-device-width: 1350px) and (min-device-width: 420px) {
+  @media screen and (max-width: 1350px) and (min-device-width: 420px) {
     .loc_text_container {
       margin-left: 6%;
       margin-right: 6%; } }
@@ -823,11 +812,14 @@ a:active {
     .column {
       width: 40%;
       margin-bottom: 20px; } }
+  @media screen and (max-width: 1000px) and (min-device-width: 420px) {
+    .column {
+      width: 45%; } }
 
 .loc_city {
   font-size: 36px;
   color: #76bd22; }
-  @media screen and (max-device-width: 1350px) and (min-device-width: 420px) {
+  @media screen and (max-width: 1350px) and (min-device-width: 420px) {
     .loc_city {
       font-size: 1.5em; } }
 
@@ -836,7 +828,7 @@ a:active {
   margin-top: 0px;
   font-family: 'Roboto';
   font-weight: 100; }
-  @media screen and (max-device-width: 1350px) and (min-device-width: 420px) {
+  @media screen and (max-width: 1350px) and (min-device-width: 420px) {
     .loc_text, .office_text {
       font-size: 1em; } }
 
@@ -854,12 +846,15 @@ a:active {
     .column_office {
       width: 40%;
       margin-bottom: 20px; } }
+  @media screen and (max-width: 1000px) and (min-device-width: 420px) {
+    .column_office {
+      width: 45%; } }
 
 .office_hours {
   font-size: 30px;
   font-family: 'Roboto';
   font-weight: 100; }
-  @media screen and (max-device-width: 1350px) and (min-device-width: 420px) {
+  @media screen and (max-width: 1350px) and (min-device-width: 420px) {
     .office_hours {
       font-size: 1.5em; } }
 
@@ -956,13 +951,13 @@ a:active {
 .footer .top_navi {
   position: absolute;
   display: inline-block;
-  height: 150px;
   margin-top: 60px;
   margin-left: 13%;
   font-size: 18px; }
-  @media screen and (max-device-width: 420px) {
+  @media screen and (max-width: 1000px) {
     .footer .top_navi {
-      margin-left: 3%; } }
+      margin-left: 0%;
+      min-width: 900px; } }
 
 .footer_location {
   position: relative;
@@ -970,9 +965,9 @@ a:active {
   margin-left: 13%;
   font-size: 18px;
   height: 30px; }
-  @media screen and (max-device-width: 420px) {
+  @media screen and (max-width: 1000px) {
     .footer_location {
-      margin-left: 3%; } }
+      margin-left: 0%; } }
 
 .footer .top_navi > span, .footer .top_navi a {
   height: 1em;
@@ -988,5 +983,8 @@ a:active {
   height: 39px;
   vertical-align: middle;
   margin-right: 10px; }
+
+.open_map:hover {
+  color: #76BD22; }
 
 /*# sourceMappingURL=main.css.map */

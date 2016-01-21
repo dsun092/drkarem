@@ -64,7 +64,8 @@ map = new google.maps.Map(document.getElementById('map1'), {
   center: {lat: 34.014440, lng: -118.407727},
   zoom: 18,
   scaleControl: false,
-  draggable: false,
+  draggable: true,
+  scrollwheel: false,
   navigationControl: false,
 });
 
@@ -72,7 +73,8 @@ map2 = new google.maps.Map(document.getElementById('map2'), {
   center: {lat: 33.665279, lng: -117.763177},
   zoom: 18,
   scaleControl: false,
-  draggable: false,
+  draggable: true,
+  scrollwheel: false,
   navigationControl: false,
 });
 
@@ -95,12 +97,12 @@ marker2 = new google.maps.Marker({
 });
 google.maps.event.trigger(map, 'resize');
 google.maps.event.trigger(map2, 'resize');
-var content1 = "<div class='inf_header'>Address:</div><div class='info_address'>10826 W Washington Blvd, Culver City, CA 90232</div><br/><div><a href='https://www.google.com/maps/place/Dr.+Kazem+Dentistry/@34.0135781,-118.4110787,17z/data=!3m1!4b1!4m2!3m1!1s0x80c2ba376505e499:0xa79eb29c599819e'>Open In Maps</a></div>"
+var content1 = "<div class='inf_header'>Address:</div><div class='info_address'>10826 W Washington Blvd, Culver City, CA 90232</div><br/><div><a href='https://www.google.com/maps/place/Dr.+Kazem+Dentistry/@34.0135781,-118.4110787,17z/data=!3m1!4b1!4m2!3m1!1s0x80c2ba376505e499:0xa79eb29c599819e' class='open_map'>Open In Maps</a></div>"
 var info1 = new google.maps.InfoWindow({
   content: content1,
   pixelOffset: new google.maps.Size(0, 80),
 })
-var content2 = "<div class='inf_header'>Address:</div><div class='info_address'>113 Waterworks Way #150, Irvine, CA 90232</div><br/><div><a href='https://www.google.com/maps/place/113+Waterworks+Way+%23150,+Irvine,+CA+92618/@33.6652831,-117.7653661,17z/data=!3m1!4b1!4m2!3m1!1s0x80dcdd69bcb27f97:0x4af104f84487374c'>Open In Maps</a></div>"
+var content2 = "<div class='inf_header'>Address:</div><div class='info_address'>113 Waterworks Way #150, Irvine, CA 90232</div><br/><div><a href='https://www.google.com/maps/place/113+Waterworks+Way+%23150,+Irvine,+CA+92618/@33.6652831,-117.7653661,17z/data=!3m1!4b1!4m2!3m1!1s0x80dcdd69bcb27f97:0x4af104f84487374c' class='open_map'>Open In Maps</a></div>"
 var info2 = new google.maps.InfoWindow({
   content: content2,
   pixelOffset: new google.maps.Size(0, 80),
@@ -108,19 +110,24 @@ var info2 = new google.maps.InfoWindow({
 info1.open(map, marker1);
 info2.open(map2, marker2);
 
-var cw = $('.our_office_row').first().width();
-cw = cw * .332;
-console.log(cw);
-height = cw * .72;
-console.log(height);
-$('.office_pic').css({'height': height});
+// window.resize()
+// var cw = $('.our_office_row').first().width();
+// cw = cw * .332;
+// height = cw * .72;
+// $('.office_pic').css({'height': height});
+// window.onresize = function(){
+//   console.log($(window).width());
+//   var cw = $('.our_office_row').first().width();
+//   cw = cw * .332;
+//   height = cw * .72;
+//   $('.office_pic').css({'height': height});
+// }
+
 
 $('#english').click(function(){
   english = true;
   var en = $('.en');
-  console.log(en);
   $.each(en, function(item, value){
-    console.log(value);
     $(value).css({'display': 'inline'});
   })
   var ar = $('.ar');
@@ -137,9 +144,7 @@ $('#arabic').click(function(){
     $(value).css({'display': 'inline'});
   })
   var en = $('.en');
-  console.log(en);
   $.each(en, function(item, value){
-    console.log(value);
     $(value).css({'display': 'none'});
   })
   $('.doc_text').css({'text-align': 'right'});
@@ -329,12 +334,10 @@ var interval = setInterval(transition, 6000);
   var test_text_ar = [test1ar, test2ar, test3ar, test4ar];
   var test_author = [test1author, test2author, test3author, test4author];
   var test_text = [test1, test2, test3, test4];
-  console.log(test_button);
   var fading = false;
 
   $.each(test_button, function(item, value){
     $(value).on('click', function(){
-      console.log(item);
       // $('.testimonial_text').html(test_text[item]);
       // $('.testimonial_text_ar').html(test_text_ar[item]);
       // $('.testimonial_author').html(test_author[item]);
@@ -352,7 +355,6 @@ var interval = setInterval(transition, 6000);
       $('.testimonial_author').fadeOut('slow', function() {
           $('.testimonial_author').text(test_author[item]).fadeIn('slow');
       });
-      console.log(english);
       if(english){
         $('.testimonial_text').css('display', 'inline');
         $('.testimonial_text_ar').css('display', 'none');
@@ -367,12 +369,9 @@ var interval = setInterval(transition, 6000);
   })
   if( $('.test_buttons_container').first().css('display')=='none') {
         var current_test = 0;
-        console.log("is mobile");
         $('.testimonials').first().on('click', function(event){
-          console.log("hello");
         })
           $('.testimonials').first().on('swiperight', function(event){
-            console.log(event);
             if(current_test !== 3){
               current_test++;
             }
@@ -398,7 +397,6 @@ var interval = setInterval(transition, 6000);
               }
           })
           $('.testimonials').first().on('swipeleft', function(event){
-            console.log(event);
             if(current_test !== 0){
               current_test--;
             }
