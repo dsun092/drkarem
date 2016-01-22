@@ -565,27 +565,27 @@ a:active {
 	justify-content: space-around;
 	flex-flow: column wrap;
 	.two{
-		background-image: url('https://drkazem.firebaseapp.com/images/doctors/image8.JPG');
+		background-image: url('https://drkazem.firebaseapp.com/images/doctors/image11.JPG');
 		background-size: cover;
 		background-repeat: no-repeat;
 	}
 	.three{
-		background-image: url('https://drkazem.firebaseapp.com/images/doctors/image5.JPG');
+		background-image: url('https://drkazem.firebaseapp.com/images/doctors/image10.JPG');
 		background-size: cover;
 		background-repeat: no-repeat;
 	}
 	.four{
-		background-image: url('https://drkazem.firebaseapp.com/images/doctors/image14.JPG');
+		background-image: url('https://drkazem.firebaseapp.com/images/doctors/image8.JPG');
 		background-size: cover;
 		background-repeat: no-repeat;
 	}
 	.five{
-		background-image: url('https://drkazem.firebaseapp.com/images/doctors/image3.JPG');
+		background-image: url('https://drkazem.firebaseapp.com/images/doctors/image1.JPG');
 		background-size: cover;
 		background-repeat: no-repeat;
 	}
 	.six{
-		background-image: url('https://drkazem.firebaseapp.com/images/doctors/image12.JPG');
+		background-image: url('https://drkazem.firebaseapp.com/images/doctors/image13.JPG');
 		background-size: cover;
 		background-repeat: no-repeat;
 	}
@@ -904,6 +904,10 @@ a:active {
 	height: 480px;
 	background-color:#76bd22;
 	text-align:center;
+	@media screen and (max-width: $ipad){
+	    height: 700px;
+	    overflow:auto;
+    }
 }
 #form1 input{
 	padding-left: 5px;
@@ -923,6 +927,11 @@ a:active {
 	-webkit-justify-content: space-around;
 	-webkit-flex-flow: row wrap;
  	justify-content:space-around;
+ 	@media screen and (max-width: $ipad){
+	    flex-flow: column wrap;
+	    -webkit-flex-flow: column wrap;
+    }
+
  }
  .right_form .input{
  	width:100%;
@@ -932,10 +941,20 @@ a:active {
  .left_form{
  	width:31%;
  	margin-left:13%;
+ 	min-width: 255px;
+ 	@media screen and (max-width: $ipad){
+	    margin-left: auto;
+	    margin-right: auto;
+    }
  }
  .right_form{
  	width:31%;
  	margin-right:13%;
+ 	min-width: 255px;
+ 	@media screen and (max-width: $ipad){
+	    margin-left: auto;
+	    margin-right: auto;
+    }
  }
 .right_form textarea{
 	height: 100px !important;
@@ -1002,7 +1021,7 @@ a:active {
     font-size: 18px;
     height: 30px;
     @media screen and (max-width: $ipad){
-	    margin-left:0%;
+	    min-width: 700px;
     }
 }
 
