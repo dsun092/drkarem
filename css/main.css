@@ -321,7 +321,8 @@ a:active {
   margin-right: 13%;
   padding-top: 100px;
   padding-bottom: 60px;
-  flex-flow: row wrap; }
+  flex-flow: row wrap;
+  -webkit-flex-flow: row wrap; }
   @media screen and (max-device-width: 420px) {
     .services > a {
       display: block;
@@ -576,15 +577,6 @@ a:active {
     .office_pic {
       width: 100%;
       height: 600px !important; } }
-
-.office_pic:hover .office_image_text {
-  opacity: .7;
-  background-color: lightgrey;
-  -webkit-transition: opacity .5s ease-in;
-  -moz-transition: opacity .5s ease-in;
-  -o-transition: opacity .5s ease-in;
-  transition: opacity .5s ease-in;
-  z-index: 30; }
 
 .office_image_main_text {
   text-align: left;

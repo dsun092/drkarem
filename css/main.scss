@@ -246,6 +246,7 @@ a:active {
 .main_slider:hover .slider_buttons{
 	visibility: visible;
 }
+
 .slider_buttons{
 	visibility: hidden;
 	position: absolute;
@@ -333,6 +334,7 @@ a:active {
     padding-top:100px;;
     padding-bottom:60px;
     flex-flow: row wrap;
+    -webkit-flex-flow: row wrap;
     @media screen and (max-device-width: $mobile){
 	    display: block;
 	    /* overflow: auto; */
@@ -607,15 +609,6 @@ a:active {
 		height: 600px !important;
 	}
 
-}
-.office_pic:hover .office_image_text{
-	opacity: .7;
-	background-color: lightgrey;
-	-webkit-transition: opacity .5s ease-in;
-	-moz-transition: opacity .5s ease-in;
-	-o-transition: opacity .5s ease-in;
-	transition: opacity .5s ease-in;
-	z-index:30;
 }
 .office_image_main_text{
 	text-align: left;
