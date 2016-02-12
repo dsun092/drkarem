@@ -73,22 +73,21 @@
 				<span class="slider_button">MAKE AN APPOINTMENT</span>
 			</a>
 		</div>
-
 		<div class="slider_buttons">
 			<div id="button1"></div>
 			<div id="button2"></div>
 			<div id="button3"></div>
 			<div id="button4"></div>
-			<div id="button5"></div>
 		</div>
     </div>
 
+	<a name='service'></a>
 	<div class="services">
 		<div class="services_header">
 			<span class="en">SERVICES</span>
 			<span class="ar">خدماتنا</span>
 		</div>
-		<a name="service">
+		<a name="test" class='service_container'>
 		<div class="service_column1">
 			<div class="service_header">
 				<div><span class="en">FAMILY CARE</span></div>
@@ -258,12 +257,11 @@
 					</div>
 				</div>
 			</div> -->
-			<div class="office_pic two">
+			<!-- <div class="office_pic two">
 				<div class="office_image_text">
 					<div class="office_header"><span class="en">Waiting Room</span></div> 
-					<!-- <div class="office_header"><span class="en">Back Rooms</span></div> -->
 				</div>
-			</div>
+			</div> -->
 			<div class="office_pic three">
 				<div class="office_image_text">
 					<div class="office_header"><span class="en">Consultation Office</span></div>
@@ -282,17 +280,17 @@
 				</div>
 			</div>
 			<div class="office_pic six">
-				<div class="office_image_text row2">
-					<div class="office_header"><span class="en">Garden</span></div>
+					<div class="gallery_button" onclick="location.href='gallery.html';">
+						<span style="cursor: pointer;">Gallery</span>
+					</div>
 					<!-- <div class="office_header"><span class="en">Waiting Room</span></div> -->
-				</div>
 			</div>
 		</div>
 		</a>
 	</div>
 
+	<a name="testimonials"></a>
 	<div class="testimonials">
-		<a name="testimonials"></a>
 			<div class="test_header">
 				<div><span class="en">Testimonials</span></div>
 				<div><span class="ar">تقييم العملاء</span></div>
@@ -318,7 +316,7 @@
 	</div>
 
 	<div class="location_map">
-		<div class="services_header" style="margin-top:60px;">
+		<div class="map_header" style="margin-top:60px;">
 			<span class="en">VISIT US</span>
 			<span class="ar">زيارة</span>
 		</div>
@@ -388,11 +386,11 @@
 		<div class="contact_us_form">
 			<form id="form1">
 				<div class="left_form">
-					<input type="text" name="fullname" placeholder="Your Full Name..." class="input"></input>
+					<input type="text" name="fullname" placeholder="Your Full Name..." class="input" id='patient_name'></input>
 					<br/>
 					<input type="text" name="email" placeholder="Your Email..." class="input"></input>
 					<br/>
-					<input type="text" name="phone" placeholder="Your Phone Number..." class="input"></input>
+					<input type="text" name="phone" placeholder="Your Phone Number..." class="input" id='patient_number'></input>
 					<br/>
 					<span class="input">Appointment Type</span><br/>
 					<select name="type" class="input" placeholder="Choose from Options Below">

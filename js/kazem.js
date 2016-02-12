@@ -159,18 +159,22 @@ info2.open(map2, marker2);
 
   $('a[href^="#"]').click(function() {
       var target = $(this.hash);
+      var amount = 60;
+      if(document.body.scrollTop === 0){
+        amount = 195;
+      }
       if (target.length == 0) target = $('a[name="' + this.hash.substr(1) + '"]');
       if (target.length == 0) target = $('html');
-      $('html, body').animate({ scrollTop: target.offset().top-60 }, 1000);
+      $('html, body').animate({ scrollTop: target.offset().top - amount}, 1000);
       return false;
   });
 var count = 0;
-var hero_images = ['url(images/doctors/hero1.jpg)', 'url(images/doctors/hero2.jpg)', 'url(images/doctors/hero3.jpg)', 'url(images/doctors/hero4.jpg)', 'url(images/doctors/hero5.jpg)']
+var hero_images = ['url(images/doctors/hero1.jpg)', 'url(images/doctors/hero5.jpg)', 'url(images/doctors/hero3.jpg)', 'url(images/doctors/hero2.jpg)']
   $('#button1').on('click', function() {
     skip = true;
     clearInterval(interval);
     window.clearTimeout(timeout);
-    $('.main_slider').animate({ opacity: 0 }, { duration: 1000 });
+    $('.main_slider').animate({ opacity: 0 }, { duration: 800 });
     setTimeout(function(){
       $('#slider_btn').attr("href", "#contact_us");
       $('.slider_text').text(slider_text_array[0]);
@@ -182,16 +186,16 @@ var hero_images = ['url(images/doctors/hero1.jpg)', 'url(images/doctors/hero2.jp
       $('.main_slider_header').removeClass('slider_text_right');
       $('.main_slider_desc').removeClass('slider_text_right');
       $('.main_slider_btn').removeClass('slider_text_right');
-      $('.main_slider').animate({ opacity: 1 }, { duration: 1000 })
-      interval = setInterval(transition, 6000);
+      $('.main_slider').animate({ opacity: 1 }, { duration: 800 })
+      interval = setInterval(transition, 8000);
       count = 0;
-    }, 1000);
+    }, 700);
   })
   $('#button2').on('click', function() {
     skip = true;
       clearInterval(interval);
       window.clearTimeout(timeout);
-      $('.main_slider').animate({ opacity: 0 }, { duration: 1000 });
+      $('.main_slider').animate({ opacity: 0 }, { duration: 800 });
       setTimeout(function(){
         $('#slider_btn').attr("href", "#team");
         $('.slider_text').text(slider_text_array[1]);
@@ -203,16 +207,16 @@ var hero_images = ['url(images/doctors/hero1.jpg)', 'url(images/doctors/hero2.jp
         $('.main_slider_header').removeClass('slider_text_right');
         $('.main_slider_desc').removeClass('slider_text_right');
         $('.main_slider_btn').removeClass('slider_text_right');
-        $('.main_slider').animate({ opacity: 1 }, { duration: 1000 });
-        interval = setInterval(transition, 6000);
+        $('.main_slider').animate({ opacity: 1 }, { duration: 800 });
+        interval = setInterval(transition, 8000);
         count = 1;
-      }, 1000);
+      }, 700);
   })
   $('#button3').on('click', function() {
     skip = true;
       clearInterval(interval);
       window.clearTimeout(timeout);
-      $('.main_slider').animate({ opacity: 0 }, { duration: 1000 });
+      $('.main_slider').animate({ opacity: 0 }, { duration: 800 });
       setTimeout(function(){
         $('#slider_btn').attr("href", "#gallery");
         $('.slider_text').text(slider_text_array[2]);
@@ -224,16 +228,16 @@ var hero_images = ['url(images/doctors/hero1.jpg)', 'url(images/doctors/hero2.jp
         $('.main_slider_header').addClass('slider_text_right');
         $('.main_slider_desc').addClass('slider_text_right');
         $('.main_slider_btn').addClass('slider_text_right');
-        $('.main_slider').animate({ opacity: 1 }, { duration: 1000 });
-        interval = setInterval(transition, 6000);
+        $('.main_slider').animate({ opacity: 1 }, { duration: 800 });
+        interval = setInterval(transition, 8000);
         count = 2;
-      }, 1000);
+      }, 700);
   })
   $('#button4').on('click', function() {
       skip = true;
       clearInterval(interval);
       window.clearTimeout(timeout);
-      $('.main_slider').animate({ opacity: 0 }, { duration: 1000 });  
+      $('.main_slider').animate({ opacity: 0 }, { duration: 800 });  
       setTimeout(function(){
         $('#slider_btn').attr("href", "#visit");
         $('.slider_text').text(slider_text_array[3]);
@@ -245,32 +249,32 @@ var hero_images = ['url(images/doctors/hero1.jpg)', 'url(images/doctors/hero2.jp
         $('.main_slider_header').addClass('slider_text_right');
         $('.main_slider_desc').addClass('slider_text_right');
         $('.main_slider_btn').addClass('slider_text_right');
-        $('.main_slider').animate({ opacity: 1 }, { duration: 1000 });
-        interval = setInterval(transition, 6000);
+        $('.main_slider').animate({ opacity: 1 }, { duration: 800 });
+        interval = setInterval(transition, 8000);
         count = 3;
-      }, 1000);
+      }, 700);
   })
-  $('#button5').on('click', function() {
-      skip = true;
-      clearInterval(interval);
-      window.clearTimeout(timeout);
-      $('.main_slider').animate({ opacity: 0 }, { duration: 1000 });
-      setTimeout(function(){
-        $('#slider_btn').attr("href", "#contact_us");
-        $('.slider_text').text(slider_text_array[4]);
-        $('.slider_text_ar').text(slider_text_array_ar[4]);
-        $('.slider_header').text(slider_header_array[4]);
-        $('.slider_header_ar').text(slider_header_array_ar[4]);
-        $('.slider_button').text(slider_btn_array[4]);
-        $('.main_slider').css('background-image', hero_images[4]);
-        $('.main_slider_header').addClass('slider_text_right');
-        $('.main_slider_desc').addClass('slider_text_right');
-        $('.main_slider_btn').addClass('slider_text_right');
-        $('.main_slider').animate({ opacity: 1 }, { duration: 1000 });
-        interval = setInterval(transition, 6000);
-        count = 4;
-      }, 1000);
-  });
+  // $('#button5').on('click', function() {
+  //     skip = true;
+  //     clearInterval(interval);
+  //     window.clearTimeout(timeout);
+  //     $('.main_slider').animate({ opacity: 0 }, { duration: 800 });
+  //     setTimeout(function(){
+  //       $('#slider_btn').attr("href", "#contact_us");
+  //       $('.slider_text').text(slider_text_array[4]);
+  //       $('.slider_text_ar').text(slider_text_array_ar[4]);
+  //       $('.slider_header').text(slider_header_array[4]);
+  //       $('.slider_header_ar').text(slider_header_array_ar[4]);
+  //       $('.slider_button').text(slider_btn_array[4]);
+  //       $('.main_slider').css('background-image', hero_images[4]);
+  //       $('.main_slider_header').addClass('slider_text_right');
+  //       $('.main_slider_desc').addClass('slider_text_right');
+  //       $('.main_slider_btn').addClass('slider_text_right');
+  //       $('.main_slider').animate({ opacity: 1 }, { duration: 800 });
+  //       interval = setInterval(transition, 8000);
+  //       count = 4;
+  //     }, 700);
+  // });
 var timeout;
 var skip = false;
 function transition() {
@@ -281,7 +285,7 @@ function transition() {
     $('.slider_header_ar').text(slider_header_array_ar[count]);
     $('.slider_button').text(slider_btn_array[count]);
     $('.main_slider').css('background-image', hero_images[count]);
-    $('.main_slider').animate({ opacity: 1 }, { duration: 1000 });
+    $('.main_slider').animate({ opacity: 1 }, { duration: 800 });
     if(count === 0){
       $('#slider_btn').attr("href", "#contact_us");
     }else if(count === 1){
@@ -311,11 +315,11 @@ function transition() {
     count = 0;
   }
   timeout = setTimeout(function(){
-    $('.main_slider').animate({ opacity: 0 }, { duration: 1000 });
+    $('.main_slider').animate({ opacity: 0 }, { duration: 800 });
     skip = false;
-  }, 5000)
+  }, 7000)
 }
-var interval = setInterval(transition, 6000);
+var interval = setInterval(transition, 8000);
 
 
 

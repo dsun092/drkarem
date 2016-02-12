@@ -180,6 +180,9 @@ a:active {
   -webkit-box-shadow: 0 9px 3px -9px #000;
   -moz-box-shadow: 0 9px 3px -9px #000;
   box-shadow: 0 9px 3px -9px #000; }
+  @media screen and (max-device-width: 420px) {
+    .main_slider {
+      background-attachment: scroll; } }
 
 .main_slider_header {
   font-size: 60px;
@@ -196,7 +199,7 @@ a:active {
   font-size: 36px;
   line-height: 36px;
   font-family: 'Roboto';
-  font-weight: 500;
+  font-weight: 300;
   position: absolute;
   top: 35%;
   margin-left: 13%;
@@ -225,28 +228,18 @@ a:active {
   margin: 10px;
   color: white; }
 
-.main_slider:hover .slider_buttons {
-  visibility: visible; }
-
 .slider_buttons {
-  visibility: hidden;
   position: absolute;
   bottom: 60px;
   margin: 0 auto;
   width: 130px;
   display: flex;
-  display: -webkit-box;
-  /* OLD - iOS 6-, Safari 3.1-6 */
-  display: -moz-box;
-  /* OLD - Firefox 19- (buggy but mostly works) */
-  display: -ms-flexbox;
-  /* TWEENER - IE 10 */
   display: -webkit-flex;
   /* NEW - Chrome */
   -webkit-justify-content: space-around;
   justify-content: space-around;
-  margin-left: 45%;
-  margin-right: 45%; }
+  left: 0;
+  right: 0; }
 
 .slider_buttons div {
   height: 20px;
@@ -286,12 +279,6 @@ a:active {
   width: 100%;
   /* top: 195px; */
   display: flex;
-  display: -webkit-box;
-  /* OLD - iOS 6-, Safari 3.1-6 */
-  display: -moz-box;
-  /* OLD - Firefox 19- (buggy but mostly works) */
-  display: -ms-flexbox;
-  /* TWEENER - IE 10 */
   display: -webkit-flex;
   /* NEW - Chrome */
   -webkit-justify-content: space-around;
@@ -305,14 +292,8 @@ a:active {
   color: #76BD22;
   position: absolute; }
 
-.services > a {
+.services > a.service_container {
   display: flex;
-  display: -webkit-box;
-  /* OLD - iOS 6-, Safari 3.1-6 */
-  display: -moz-box;
-  /* OLD - Firefox 19- (buggy but mostly works) */
-  display: -ms-flexbox;
-  /* TWEENER - IE 10 */
   display: -webkit-flex;
   /* NEW - Chrome */
   -webkit-justify-content: space-around;
@@ -324,14 +305,14 @@ a:active {
   flex-flow: row wrap;
   -webkit-flex-flow: row wrap; }
   @media screen and (max-device-width: 420px) {
-    .services > a {
+    .services > a.service_container {
       display: block;
       /* overflow: auto; */
       width: 100%;
       margin: 0 auto;
       text-align: center; } }
   @media screen and (max-width: 1350px) and (min-device-width: 420px) {
-    .services > a {
+    .services > a.service_container {
       display: block;
       /* overflow: auto; */
       width: 100%;
@@ -431,12 +412,6 @@ a:active {
 
 .our_team_images {
   display: flex;
-  display: -webkit-box;
-  /* OLD - iOS 6-, Safari 3.1-6 */
-  display: -moz-box;
-  /* OLD - Firefox 19- (buggy but mostly works) */
-  display: -ms-flexbox;
-  /* TWEENER - IE 10 */
   display: -webkit-flex;
   /* NEW - Chrome */
   -webkit-justify-content: space-between;
@@ -529,12 +504,6 @@ a:active {
   /*height: 80vh;*/
   /* float: left; */
   display: flex;
-  display: -webkit-box;
-  /* OLD - iOS 6-, Safari 3.1-6 */
-  display: -moz-box;
-  /* OLD - Firefox 19- (buggy but mostly works) */
-  display: -ms-flexbox;
-  /* TWEENER - IE 10 */
   display: -webkit-flex;
   /* NEW - Chrome */
   -webkit-justify-content: space-around;
@@ -575,6 +544,7 @@ a:active {
   transition: all .5s ease-in-out; }
   @media screen and (max-device-width: 420px) {
     .office_pic {
+      background-attachment: scroll;
       width: 100%;
       height: 600px !important; } }
 
@@ -650,10 +620,19 @@ a:active {
   font-family: 'Roboto';
   font-weight: 100; }
 
+.gallery_button {
+  margin: auto;
+  text-align: center;
+  position: relative;
+  top: 40vh; }
+
 .gallery_button span {
   cursor: pointer;
-  padding: 10px 20px;
-  border: 1px solid #929292;
+  padding: 30px 60px;
+  font-size: 16pt;
+  border: 1px solid white;
+  color: white;
+  font-weight: 100;
   -webkit-transition: all .5s ease-in-out;
   -moz-transition: all .5s ease-in-out;
   -o-transition: all .5s ease-in-out;
@@ -661,7 +640,8 @@ a:active {
   transition: all .5s ease-in-out; }
 
 .gallery_button span:hover {
-  background-color: #DDD; }
+  background-color: #DDD;
+  color: black; }
 
 .testimonials {
   position: relative;
@@ -679,12 +659,6 @@ a:active {
   width: 100px;
   margin: 0 auto;
   display: flex;
-  display: -webkit-box;
-  /* OLD - iOS 6-, Safari 3.1-6 */
-  display: -moz-box;
-  /* OLD - Firefox 19- (buggy but mostly works) */
-  display: -ms-flexbox;
-  /* TWEENER - IE 10 */
   display: -webkit-flex;
   /* NEW - Chrome */
   -webkit-justify-content: space-around;
@@ -739,30 +713,30 @@ a:active {
   position: relative;
   /* top: 195px; */
   width: 100%;
-  height: 600px;
   display: flex;
-  display: -webkit-box;
-  /* OLD - iOS 6-, Safari 3.1-6 */
-  display: -moz-box;
-  /* OLD - Firefox 19- (buggy but mostly works) */
-  display: -ms-flexbox;
-  /* TWEENER - IE 10 */
   display: -webkit-flex;
   /* NEW - Chrome */
   -webkit-justify-content: space-around;
   -webkit-flex-flow: row wrap;
   justify-content: space-around; }
 
+.map_header {
+  width: 100%;
+  text-align: center;
+  font-size: 48px;
+  color: #76BD22;
+  margin-bottom: 60px; }
+
 .location_map a {
   width: 0%; }
 
 #map1 {
   width: 49%;
-  margin-top: 160px; }
+  height: 48vh; }
 
 #map2 {
   width: 49%;
-  margin-top: 160px; }
+  height: 48vh; }
 
 .location_text {
   width: 100%;
@@ -774,12 +748,6 @@ a:active {
   padding-top: 60px;
   padding-bottom: 60px;
   display: flex;
-  display: -webkit-box;
-  /* OLD - iOS 6-, Safari 3.1-6 */
-  display: -moz-box;
-  /* OLD - Firefox 19- (buggy but mostly works) */
-  display: -ms-flexbox;
-  /* TWEENER - IE 10 */
   display: -webkit-flex;
   /* NEW - Chrome */
   -webkit-justify-content: space-between;
@@ -860,9 +828,13 @@ a:active {
   height: 480px;
   background-color: #76bd22;
   text-align: center; }
-  @media screen and (max-width: 1000px) {
+  @media screen and (max-width: 1000px) and (min-device-width: 420px) {
     .contact_us {
       height: 700px;
+      overflow: auto; } }
+  @media screen and (max-device-width: 420px) {
+    .contact_us {
+      height: 760px;
       overflow: auto; } }
 
 #form1 input {
@@ -876,12 +848,6 @@ a:active {
 
 .contact_us_form > form {
   display: flex;
-  display: -webkit-box;
-  /* OLD - iOS 6-, Safari 3.1-6 */
-  display: -moz-box;
-  /* OLD - Firefox 19- (buggy but mostly works) */
-  display: -ms-flexbox;
-  /* TWEENER - IE 10 */
   display: -webkit-flex;
   /* NEW - Chrome */
   -webkit-justify-content: space-around;
