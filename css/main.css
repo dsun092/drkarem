@@ -89,7 +89,7 @@ a:active {
   -webkit-transition: height .5s, width .5s, font-size .5s, left .5s ease;
   -o-transition: height .5s, width .5s, font-size .5s, left .5s ease;
   transition: height .5s, width .5s, font-size .5s, left .5s ease; }
-  @media screen and (min-width: 1350px) and (min-device-width: 420px) {
+  @media screen and (min-width: 1350px) and (min-device-width: 500px) {
     .main_menu {
       margin-left: 0%; } }
   @media screen and (max-width: 1000px) {
@@ -106,7 +106,7 @@ a:active {
   -o-transition: all .5s ease;
   -ms-transition: all .5s ease;
   transition: all .5s ease; }
-  @media screen and (max-width: 1350px) and (min-device-width: 420px) {
+  @media screen and (max-width: 1350px) and (min-device-width: 500px) {
     .main_menu .main_logo {
       margin-left: 0%; } }
 
@@ -129,10 +129,10 @@ a:active {
   justify-content: space-between;
   right: 13%;
   min-width: 550px; }
-  @media screen and (max-device-width: 420px) {
+  @media screen and (max-device-width: 500px) {
     .main_menu .top_navi {
       display: none; } }
-  @media screen and (max-width: 1350px) and (min-device-width: 420px) {
+  @media screen and (max-width: 1350px) and (min-device-width: 500px) {
     .main_menu .top_navi {
       width: 55%;
       right: 3%; } }
@@ -180,7 +180,7 @@ a:active {
   -webkit-box-shadow: 0 9px 3px -9px #000;
   -moz-box-shadow: 0 9px 3px -9px #000;
   box-shadow: 0 9px 3px -9px #000; }
-  @media screen and (max-device-width: 420px) {
+  @media screen and (max-device-width: 500px) {
     .main_slider {
       background-attachment: scroll; } }
 
@@ -217,7 +217,7 @@ a:active {
   line-height: 59.8px;
   cursor: pointer;
   text-align: center !important; }
-  @media screen and (max-device-width: 420px) {
+  @media screen and (max-device-width: 500px) {
     .main_slider_btn {
       display: none; } }
 
@@ -304,14 +304,14 @@ a:active {
   padding-bottom: 60px;
   flex-flow: row wrap;
   -webkit-flex-flow: row wrap; }
-  @media screen and (max-device-width: 420px) {
+  @media screen and (max-device-width: 500px) {
     .services > a.service_container {
       display: block;
       /* overflow: auto; */
       width: 100%;
       margin: 0 auto;
       text-align: center; } }
-  @media screen and (max-width: 1350px) and (min-device-width: 420px) {
+  @media screen and (max-width: 1350px) and (min-device-width: 500px) {
     .services > a.service_container {
       display: block;
       /* overflow: auto; */
@@ -322,23 +322,23 @@ a:active {
 .service_column1, .service_column2, .service_column3, .service_column4 {
   width: 240px;
   position: relative; }
-  @media screen and (max-device-width: 420px) {
+  @media screen and (max-device-width: 500px) {
     .service_column1, .service_column2, .service_column3, .service_column4 {
       width: 50%;
       float: left; }
       .service_column1 .service_row, .service_column2 .service_row, .service_column3 .service_row, .service_column4 .service_row {
         font-size: 30px; } }
-  @media screen and (max-width: 1350px) and (min-device-width: 420px) {
+  @media screen and (max-width: 1350px) and (min-device-width: 500px) {
     .service_column1, .service_column2, .service_column3, .service_column4 {
       width: 50%;
       float: left; }
       .service_column1 .service_row, .service_column2 .service_row, .service_column3 .service_row, .service_column4 .service_row {
         font-size: 30px; } }
 
-@media screen and (max-device-width: 420px) {
+@media screen and (max-device-width: 500px) {
   .service_column1, .service_column2 {
     margin-bottom: 60px; } }
-@media screen and (max-width: 1350px) and (min-device-width: 420px) {
+@media screen and (max-width: 1350px) and (min-device-width: 500px) {
   .service_column1, .service_column2 {
     margin-bottom: 60px; } }
 
@@ -347,10 +347,10 @@ a:active {
   font-size: 36px; }
   .service_header div {
     text-align: right; }
-  @media screen and (max-width: 1350px) and (min-device-width: 420px) {
+  @media screen and (max-width: 1350px) and (min-device-width: 500px) {
     .service_header div {
       text-align: center; } }
-  @media screen and (max-device-width: 420px) {
+  @media screen and (max-device-width: 500px) {
     .service_header div {
       text-align: center; } }
 
@@ -361,10 +361,10 @@ a:active {
   font-weight: 100; }
   .service_row div {
     text-align: right; }
-  @media screen and (max-width: 1350px) and (min-device-width: 420px) {
+  @media screen and (max-width: 1350px) and (min-device-width: 500px) {
     .service_row div {
       text-align: center; } }
-  @media screen and (max-device-width: 420px) {
+  @media screen and (max-device-width: 500px) {
     .service_row div {
       text-align: center; } }
 
@@ -406,7 +406,7 @@ a:active {
   @media screen and (max-width: 1440px) and (min-width: 1000px) {
     .our_images_container {
       width: 70%; } }
-  @media screen and (max-width: 1000px) and (min-device-width: 420px) {
+  @media screen and (max-width: 1000px) and (min-device-width: 500px) {
     .our_images_container {
       width: 100%; } }
 
@@ -535,14 +535,14 @@ a:active {
   background-attachment: fixed;
   background-position: 50% 50%;
   width: 100%;
-  height: 800px;
+  height: 85vh;
   border: 1px solid #ddD;
   -webkit-transition: all .5s ease-in-out;
   -moz-transition: all .5s ease-in-out;
   -o-transition: all .5s ease-in-out;
   -ms-transition: all .5s ease-in-out;
   transition: all .5s ease-in-out; }
-  @media screen and (max-device-width: 420px) {
+  @media screen and (max-device-width: 500px) {
     .office_pic {
       background-attachment: scroll;
       width: 100%;
@@ -555,7 +555,7 @@ a:active {
   position: absolute;
   top: 0px;
   width: 33.22%; }
-  @media screen and (max-width: 1350px) and (min-device-width: 420px) {
+  @media screen and (max-width: 1350px) and (min-device-width: 500px) {
     .office_image_main_text {
       font-size: 1em; } }
   .office_image_main_text div {
@@ -565,13 +565,13 @@ a:active {
     margin-bottom: 30px;
     padding-left: 30px;
     padding-right: 30px; }
-    @media screen and (max-width: 1350px) and (min-device-width: 420px) {
+    @media screen and (max-width: 1350px) and (min-device-width: 500px) {
       .office_image_main_text div {
         top: 20px;
         margin-bottom: 20px;
         padding-left: 10px;
         padding-right: 0px; } }
-  @media screen and (max-device-width: 420px) {
+  @media screen and (max-device-width: 500px) {
     .office_image_main_text {
       width: 100%;
       height: 600px !important; }
@@ -581,7 +581,7 @@ a:active {
         font-size: 2em; }
       .office_image_main_text .office_desc {
         font-size: 1.2em; } }
-  @media screen and (max-device-width: 1000px) and (min-device-width: 420px) {
+  @media screen and (max-device-width: 1000px) and (min-device-width: 500px) {
     .office_image_main_text .office_head {
       font-size: 1.2em; }
     .office_image_main_text .office_desc {
@@ -713,11 +713,13 @@ a:active {
   position: relative;
   /* top: 195px; */
   width: 100%;
+  height: calc(48vh + 178px);
   display: flex;
   display: -webkit-flex;
   /* NEW - Chrome */
   -webkit-justify-content: space-around;
   -webkit-flex-flow: row wrap;
+  flex-flow: row wrap;
   justify-content: space-around; }
 
 .map_header {
@@ -756,10 +758,10 @@ a:active {
   -webkit-flex-flow: row wrap;
   -webkit-justify-content: space-between;
   justify-content: space-between; }
-  @media screen and (max-device-width: 420px) {
+  @media screen and (max-device-width: 500px) {
     .loc_text_container {
       width: 100%; } }
-  @media screen and (max-width: 1350px) and (min-device-width: 420px) {
+  @media screen and (max-width: 1350px) and (min-device-width: 500px) {
     .loc_text_container {
       margin-left: 6%;
       margin-right: 6%; } }
@@ -768,18 +770,18 @@ a:active {
   width: 20%;
   margin-left: auto;
   margin-right: auto; }
-  @media screen and (max-device-width: 420px) {
+  @media screen and (max-device-width: 500px) {
     .column {
       width: 40%;
       margin-bottom: 20px; } }
-  @media screen and (max-width: 1000px) and (min-device-width: 420px) {
+  @media screen and (max-width: 1000px) and (min-device-width: 500px) {
     .column {
       width: 45%; } }
 
 .loc_city {
   font-size: 36px;
   color: #76bd22; }
-  @media screen and (max-width: 1350px) and (min-device-width: 420px) {
+  @media screen and (max-width: 1350px) and (min-device-width: 500px) {
     .loc_city {
       font-size: 1.5em; } }
 
@@ -788,7 +790,7 @@ a:active {
   margin-top: 0px;
   font-family: 'Roboto';
   font-weight: 100; }
-  @media screen and (max-width: 1350px) and (min-device-width: 420px) {
+  @media screen and (max-width: 1350px) and (min-device-width: 500px) {
     .loc_text, .office_text {
       font-size: 1em; } }
 
@@ -802,11 +804,11 @@ a:active {
   width: 20%;
   margin-left: auto;
   margin-right: auto; }
-  @media screen and (max-device-width: 420px) {
+  @media screen and (max-device-width: 500px) {
     .column_office {
       width: 40%;
       margin-bottom: 20px; } }
-  @media screen and (max-width: 1000px) and (min-device-width: 420px) {
+  @media screen and (max-width: 1000px) and (min-device-width: 500px) {
     .column_office {
       width: 45%; } }
 
@@ -814,7 +816,7 @@ a:active {
   font-size: 30px;
   font-family: 'Roboto';
   font-weight: 100; }
-  @media screen and (max-width: 1350px) and (min-device-width: 420px) {
+  @media screen and (max-width: 1350px) and (min-device-width: 500px) {
     .office_hours {
       font-size: 1.5em; } }
 
@@ -828,11 +830,11 @@ a:active {
   height: 480px;
   background-color: #76bd22;
   text-align: center; }
-  @media screen and (max-width: 1000px) and (min-device-width: 420px) {
+  @media screen and (max-width: 1000px) and (min-device-width: 500px) {
     .contact_us {
       height: 700px;
       overflow: auto; } }
-  @media screen and (max-device-width: 420px) {
+  @media screen and (max-device-width: 500px) {
     .contact_us {
       height: 760px;
       overflow: auto; } }

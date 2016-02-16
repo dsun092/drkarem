@@ -52,14 +52,73 @@ $(document).bind('scroll', function () {
 //         $('.main_menu').removeClass('fixed');
 //     }
 // });
+function initialize(){
 
-var map;
-var map2;
-var marker;
-var marker2;
-var english = true;
+  var map;
+  var map2;
+  var marker;
+  var marker2;
+  var english = true;
 
+  map = new google.maps.Map(document.getElementById('map1'), {
+    center: {lat: 34.014440, lng: -118.407727},
+    scaleControl: false,
+    panControl: false,
+    zoomControl: false,
+    draggable: true,
+    scrollwheel: false,
+    navigationControl: false,
+  });
 
+  map2 = new google.maps.Map(document.getElementById('map2'), {
+    center: {lat: 33.665279, lng: -117.763177},
+    scaleControl: false,
+    panControl: false,
+    zoomControl: false,
+    draggable: true,
+    scrollwheel: false,
+    navigationControl: false,
+  });
+
+  map.setZoom(18);
+  map2.setZoom(18);
+
+  marker1 = new google.maps.Marker({
+    position: {lat: 34.014440, lng: -118.407727},
+    map: map,
+    icon: {
+          url: 'images/Marker.png',
+          origin: new google.maps.Point(0, -40),
+      },
+  });
+
+  marker2 = new google.maps.Marker({
+    position: {lat: 33.665279, lng: -117.763177},
+    map: map2,
+    icon: {
+          url: 'images/Marker.png',
+          origin: new google.maps.Point(0, -40),
+      },
+  });
+
+  var content1 = "<div class='inf_header'>Address:</div><div class='info_address'>10826 W Washington Blvd, Culver City, CA 90232</div><br/><div><a href='https://www.google.com/maps/place/Dr.+Kazem+Dentistry/@34.0135781,-118.4110787,17z/data=!3m1!4b1!4m2!3m1!1s0x80c2ba376505e499:0xa79eb29c599819e' class='open_map'>Open In Maps</a></div>"
+  var info1 = new google.maps.InfoWindow({
+    content: content1,
+    pixelOffset: new google.maps.Size(0, 80),
+  })
+  var content2 = "<div class='inf_header'>Address:</div><div class='info_address'>113 Waterworks Way #150, Irvine, CA 90232</div><br/><div><a href='https://www.google.com/maps/place/113+Waterworks+Way+%23150,+Irvine,+CA+92618/@33.6652831,-117.7653661,17z/data=!3m1!4b1!4m2!3m1!1s0x80dcdd69bcb27f97:0x4af104f84487374c' class='open_map'>Open In Maps</a></div>"
+  var info2 = new google.maps.InfoWindow({
+    content: content2,
+    pixelOffset: new google.maps.Size(0, 80),
+  })
+  info1.open(map, marker1);
+  info2.open(map2, marker2);
+
+    google.maps.event.trigger(map, 'resize');
+
+    google.maps.event.trigger(map2, 'resize');
+
+}
 // window.resize()
 // var cw = $('.our_office_row').first().width();
 // cw = cw * .332;
@@ -72,6 +131,8 @@ var english = true;
 //   height = cw * .72;
 //   $('.office_pic').css({'height': height});
 // }
+
+google.maps.event.addDomListener(window, 'load', initialize);
 
 
 $('#english').click(function(){
@@ -100,62 +161,7 @@ $('#arabic').click(function(){
   $('.doc_text').css({'text-align': 'right'});
 })
 
-
 $(document).ready(function() {
-
-  map = new google.maps.Map(document.getElementById('map1'), {
-  center: {lat: 34.014440, lng: -118.407727},
-  zoom: 18,
-  scaleControl: false,
-  panControl: false,
-  zoomControl: false,
-  draggable: true,
-  scrollwheel: false,
-  navigationControl: false,
-});
-
-map2 = new google.maps.Map(document.getElementById('map2'), {
-  center: {lat: 33.665279, lng: -117.763177},
-  zoom: 18,
-  scaleControl: false,
-  panControl: false,
-  zoomControl: false,
-  draggable: true,
-  scrollwheel: false,
-  navigationControl: false,
-});
-
-marker1 = new google.maps.Marker({
-  position: {lat: 34.014440, lng: -118.407727},
-  map: map,
-  icon: {
-        url: 'images/Marker.png',
-        origin: new google.maps.Point(0, -40),
-    },
-});
-
-marker2 = new google.maps.Marker({
-  position: {lat: 33.665279, lng: -117.763177},
-  map: map2,
-  icon: {
-        url: 'images/Marker.png',
-        origin: new google.maps.Point(0, -40),
-    },
-});
-
-var content1 = "<div class='inf_header'>Address:</div><div class='info_address'>10826 W Washington Blvd, Culver City, CA 90232</div><br/><div><a href='https://www.google.com/maps/place/Dr.+Kazem+Dentistry/@34.0135781,-118.4110787,17z/data=!3m1!4b1!4m2!3m1!1s0x80c2ba376505e499:0xa79eb29c599819e' class='open_map'>Open In Maps</a></div>"
-var info1 = new google.maps.InfoWindow({
-  content: content1,
-  pixelOffset: new google.maps.Size(0, 80),
-})
-var content2 = "<div class='inf_header'>Address:</div><div class='info_address'>113 Waterworks Way #150, Irvine, CA 90232</div><br/><div><a href='https://www.google.com/maps/place/113+Waterworks+Way+%23150,+Irvine,+CA+92618/@33.6652831,-117.7653661,17z/data=!3m1!4b1!4m2!3m1!1s0x80dcdd69bcb27f97:0x4af104f84487374c' class='open_map'>Open In Maps</a></div>"
-var info2 = new google.maps.InfoWindow({
-  content: content2,
-  pixelOffset: new google.maps.Size(0, 80),
-})
-info1.open(map, marker1);
-info2.open(map2, marker2);
-
 
   $('a[href^="#"]').click(function() {
       var target = $(this.hash);
