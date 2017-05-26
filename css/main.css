@@ -438,48 +438,45 @@ a:active {
 
 .drkazem {
   background-size: cover;
-  background-image: url("https://drkazem.firebaseapp.com/images/doctors/Dr-Baker.png");
+  background-image: url("https://drkazem.firebaseapp.com/images/doctors/KazemBakerCropped.jpg");
   background-repeat: no-repeat; }
 
 .dralina {
   background-size: cover;
-  background-image: url("https://drkazem.firebaseapp.com/images/doctors/Dr-Alina.png");
+  background-image: url("https://drkazem.firebaseapp.com/images/doctors/AlinaCropped.jpg");
   background-repeat: no-repeat; }
 
 .drliu {
   background-size: cover;
-  background-image: url("https://drkazem.firebaseapp.com/images/doctors/Dr-Liu.png");
+  background-image: url("https://drkazem.firebaseapp.com/images/doctors/LuuCropped.jpg");
   background-repeat: no-repeat; }
 
 .mrsbaker {
   background-size: cover;
-  background-image: url("https://drkazem.firebaseapp.com/images/doctors/Jenan-Baker.png");
+  background-image: url("https://drkazem.firebaseapp.com/images/doctors/JulissaCropped.jpg");
   background-repeat: no-repeat; }
 
 .our_team_images img {
   width: 350px;
   height: 350px; }
 
-.doc_pic:hover {
-  background-image: none;
-  /*background-position: 0px -380px;*/ }
-
 .doc_pic:hover .doc_text {
-  opacity: 1;
-  background-color: #F5F5F5;
-  -webkit-transition: opacity .5s ease-in;
-  -moz-transition: opacity .5s ease-in;
-  -o-transition: opacity .5s ease-in;
-  transition: opacity .5s ease-in;
+  max-height: 350px;
   z-index: 30; }
 
 .doc_text {
-  opacity: 0;
+  background-color: #F5F5F5;
   text-align: left;
   font-size: 23px;
   color: #464646;
   width: 350px;
-  height: 350px; }
+  height: 350px;
+  max-height: 0px;
+  overflow-y: hidden;
+  -webkit-transition: max-height .5s ease-out;
+  -moz-transition: max-height .5s ease-out;
+  -o-transition: max-height .5s ease-out;
+  transition: max-height .5s ease-out; }
 
 .doc_name {
   font-weight: 700; }
@@ -733,12 +730,14 @@ a:active {
   width: 0%; }
 
 #map1 {
-  width: 49%;
-  height: 48vh; }
+  width: 100%;
+  height: 48vh;
+  max-width: none; }
 
 #map2 {
   width: 49%;
-  height: 48vh; }
+  height: 48vh;
+  max-width: none; }
 
 .location_text {
   width: 100%;

@@ -47,44 +47,44 @@ $(document).bind('scroll', function () {
         $('.main_menu').addClass('fixed');
      }
 });
-// $(document).bind('scrollstop', function () {
-//     if($(document).scrollTop() <= 50) {
-//         $('.main_menu').removeClass('fixed');
-//     }
-// });
-function initialize(){
 
   var map;
   var map2;
   var marker;
   var marker2;
   var english = true;
+  var center1 = new google.maps.LatLng(34.014440, -118.407727);
+  var center2 = new google.maps.LatLng(33.665279, -117.763177)
 
   map = new google.maps.Map(document.getElementById('map1'), {
-    center: {lat: 34.014440, lng: -118.407727},
+    center: center1,
     scaleControl: false,
     panControl: false,
     zoomControl: false,
     draggable: true,
     scrollwheel: false,
     navigationControl: false,
+    mapTypeId: google.maps.MapTypeId.ROADMAP,
+    zoom: 9
   });
 
-  map2 = new google.maps.Map(document.getElementById('map2'), {
-    center: {lat: 33.665279, lng: -117.763177},
-    scaleControl: false,
-    panControl: false,
-    zoomControl: false,
-    draggable: true,
-    scrollwheel: false,
-    navigationControl: false,
-  });
+  // map2 = new google.maps.Map(document.getElementById('map2'), {
+  //   center: center2,
+  //   scaleControl: false,
+  //   panControl: false,
+  //   zoomControl: false,
+  //   draggable: true,
+  //   scrollwheel: false,
+  //   navigationControl: false,
+  //   mapTypeId: google.maps.MapTypeId.ROADMAP,
+  //   zoom: 9
+  // });
 
   map.setZoom(18);
-  map2.setZoom(18);
+  // map2.setZoom(18);
 
   marker1 = new google.maps.Marker({
-    position: {lat: 34.014440, lng: -118.407727},
+    position: center1,
     map: map,
     icon: {
           url: 'images/Marker.png',
@@ -92,33 +92,32 @@ function initialize(){
       },
   });
 
-  marker2 = new google.maps.Marker({
-    position: {lat: 33.665279, lng: -117.763177},
-    map: map2,
-    icon: {
-          url: 'images/Marker.png',
-          origin: new google.maps.Point(0, -40),
-      },
-  });
+  // marker2 = new google.maps.Marker({
+  //   position: center2,
+  //   map: map2,
+  //   icon: {
+  //         url: 'images/Marker.png',
+  //         origin: new google.maps.Point(0, -40),
+  //     },
+  // });
 
   var content1 = "<div class='inf_header'>Address:</div><div class='info_address'>10826 W Washington Blvd, Culver City, CA 90232</div><br/><div><a href='https://www.google.com/maps/place/Dr.+Kazem+Dentistry/@34.0135781,-118.4110787,17z/data=!3m1!4b1!4m2!3m1!1s0x80c2ba376505e499:0xa79eb29c599819e' class='open_map'>Open In Maps</a></div>"
   var info1 = new google.maps.InfoWindow({
     content: content1,
     pixelOffset: new google.maps.Size(0, 80),
   })
-  var content2 = "<div class='inf_header'>Address:</div><div class='info_address'>113 Waterworks Way #150, Irvine, CA 90232</div><br/><div><a href='https://www.google.com/maps/place/113+Waterworks+Way+%23150,+Irvine,+CA+92618/@33.6652831,-117.7653661,17z/data=!3m1!4b1!4m2!3m1!1s0x80dcdd69bcb27f97:0x4af104f84487374c' class='open_map'>Open In Maps</a></div>"
-  var info2 = new google.maps.InfoWindow({
-    content: content2,
-    pixelOffset: new google.maps.Size(0, 80),
-  })
+  // var content2 = "<div class='inf_header'>Address:</div><div class='info_address'>113 Waterworks Way #150, Irvine, CA 90232</div><br/><div><a href='https://www.google.com/maps/place/113+Waterworks+Way+%23150,+Irvine,+CA+92618/@33.6652831,-117.7653661,17z/data=!3m1!4b1!4m2!3m1!1s0x80dcdd69bcb27f97:0x4af104f84487374c' class='open_map'>Open In Maps</a></div>"
+  // var info2 = new google.maps.InfoWindow({
+  //   content: content2,
+  //   pixelOffset: new google.maps.Size(0, 80),
+  // })
   info1.open(map, marker1);
-  info2.open(map2, marker2);
+  // info2.open(map2, marker2);
 
-    google.maps.event.trigger(map, 'resize');
+google.maps.event.trigger(map, 'resize');
 
-    google.maps.event.trigger(map2, 'resize');
+// google.maps.event.trigger(map2, 'resize');
 
-}
 // window.resize()
 // var cw = $('.our_office_row').first().width();
 // cw = cw * .332;
@@ -131,8 +130,6 @@ function initialize(){
 //   height = cw * .72;
 //   $('.office_pic').css({'height': height});
 // }
-
-google.maps.event.addDomListener(window, 'load', initialize);
 
 
 $('#english').click(function(){
@@ -162,6 +159,11 @@ $('#arabic').click(function(){
 })
 
 $(document).ready(function() {
+    $(window).resize(function() {
+      console.log('here');
+        google.maps.event.trigger(map, 'resize');
+    });
+    google.maps.event.trigger(map, 'resize');
 
   $('a[href^="#"]').click(function() {
       var target = $(this.hash);
@@ -175,159 +177,8 @@ $(document).ready(function() {
       return false;
   });
 var count = 0;
-var hero_images = ['url(images/doctors/hero1.jpg)', 'url(images/doctors/hero5.jpg)', 'url(images/doctors/hero3.jpg)', 'url(images/doctors/hero2.jpg)']
-  $('#button1').on('click', function() {
-    skip = true;
-    clearInterval(interval);
-    window.clearTimeout(timeout);
-    $('.main_slider').animate({ opacity: 0 }, { duration: 800 });
-    setTimeout(function(){
-      $('#slider_btn').attr("href", "#contact_us");
-      $('.slider_text').text(slider_text_array[0]);
-      $('.slider_text_ar').text(slider_text_array_ar[0]);
-      $('.slider_header').text(slider_header_array[0]);
-      $('.slider_header_ar').text(slider_header_array_ar[0]);
-      $('.slider_button').text(slider_btn_array[0]);
-      $('.main_slider').css('background-image', hero_images[0]);
-      $('.main_slider_header').removeClass('slider_text_right');
-      $('.main_slider_desc').removeClass('slider_text_right');
-      $('.main_slider_btn').removeClass('slider_text_right');
-      $('.main_slider').animate({ opacity: 1 }, { duration: 800 })
-      interval = setInterval(transition, 8000);
-      count = 0;
-    }, 700);
-  })
-  $('#button2').on('click', function() {
-    skip = true;
-      clearInterval(interval);
-      window.clearTimeout(timeout);
-      $('.main_slider').animate({ opacity: 0 }, { duration: 800 });
-      setTimeout(function(){
-        $('#slider_btn').attr("href", "#team");
-        $('.slider_text').text(slider_text_array[1]);
-        $('.slider_text_ar').text(slider_text_array_ar[1]);
-        $('.slider_header').text(slider_header_array[1]);
-        $('.slider_header_ar').text(slider_header_array_ar[1]);
-        $('.slider_button').text(slider_btn_array[1]);
-        $('.main_slider').css('background-image', hero_images[1]);
-        $('.main_slider_header').removeClass('slider_text_right');
-        $('.main_slider_desc').removeClass('slider_text_right');
-        $('.main_slider_btn').removeClass('slider_text_right');
-        $('.main_slider').animate({ opacity: 1 }, { duration: 800 });
-        interval = setInterval(transition, 8000);
-        count = 1;
-      }, 700);
-  })
-  $('#button3').on('click', function() {
-    skip = true;
-      clearInterval(interval);
-      window.clearTimeout(timeout);
-      $('.main_slider').animate({ opacity: 0 }, { duration: 800 });
-      setTimeout(function(){
-        $('#slider_btn').attr("href", "#gallery");
-        $('.slider_text').text(slider_text_array[2]);
-        $('.slider_text_ar').text(slider_text_array_ar[2]);
-        $('.slider_header').text(slider_header_array[2]);
-        $('.slider_header_ar').text(slider_header_array_ar[2]);
-        $('.slider_button').text(slider_btn_array[2]);
-        $('.main_slider').css('background-image', hero_images[2]);
-        $('.main_slider_header').addClass('slider_text_right');
-        $('.main_slider_desc').addClass('slider_text_right');
-        $('.main_slider_btn').addClass('slider_text_right');
-        $('.main_slider').animate({ opacity: 1 }, { duration: 800 });
-        interval = setInterval(transition, 8000);
-        count = 2;
-      }, 700);
-  })
-  $('#button4').on('click', function() {
-      skip = true;
-      clearInterval(interval);
-      window.clearTimeout(timeout);
-      $('.main_slider').animate({ opacity: 0 }, { duration: 800 });  
-      setTimeout(function(){
-        $('#slider_btn').attr("href", "#visit");
-        $('.slider_text').text(slider_text_array[3]);
-        $('.slider_text_ar').text(slider_text_array_ar[3]);
-        $('.slider_header').text(slider_header_array[3]);
-        $('.slider_header_ar').text(slider_header_array_ar[3]);
-        $('.slider_button').text(slider_btn_array[3]);
-        $('.main_slider').css('background-image', hero_images[3]);
-        $('.main_slider_header').addClass('slider_text_right');
-        $('.main_slider_desc').addClass('slider_text_right');
-        $('.main_slider_btn').addClass('slider_text_right');
-        $('.main_slider').animate({ opacity: 1 }, { duration: 800 });
-        interval = setInterval(transition, 8000);
-        count = 3;
-      }, 700);
-  })
-  // $('#button5').on('click', function() {
-  //     skip = true;
-  //     clearInterval(interval);
-  //     window.clearTimeout(timeout);
-  //     $('.main_slider').animate({ opacity: 0 }, { duration: 800 });
-  //     setTimeout(function(){
-  //       $('#slider_btn').attr("href", "#contact_us");
-  //       $('.slider_text').text(slider_text_array[4]);
-  //       $('.slider_text_ar').text(slider_text_array_ar[4]);
-  //       $('.slider_header').text(slider_header_array[4]);
-  //       $('.slider_header_ar').text(slider_header_array_ar[4]);
-  //       $('.slider_button').text(slider_btn_array[4]);
-  //       $('.main_slider').css('background-image', hero_images[4]);
-  //       $('.main_slider_header').addClass('slider_text_right');
-  //       $('.main_slider_desc').addClass('slider_text_right');
-  //       $('.main_slider_btn').addClass('slider_text_right');
-  //       $('.main_slider').animate({ opacity: 1 }, { duration: 800 });
-  //       interval = setInterval(transition, 8000);
-  //       count = 4;
-  //     }, 700);
-  // });
 var timeout;
 var skip = false;
-function transition() {
-  if(!skip){
-    $('.slider_text').text(slider_text_array[count]);
-    $('.slider_text_ar').text(slider_text_array_ar[count]);
-    $('.slider_header').text(slider_header_array[count]);
-    $('.slider_header_ar').text(slider_header_array_ar[count]);
-    $('.slider_button').text(slider_btn_array[count]);
-    $('.main_slider').css('background-image', hero_images[count]);
-    $('.main_slider').animate({ opacity: 1 }, { duration: 800 });
-    if(count === 0){
-      $('#slider_btn').attr("href", "#contact_us");
-    }else if(count === 1){
-      $('#slider_btn').attr("href", "#team");
-    }else if(count === 2){
-      $('#slider_btn').attr("href", "#gallery");
-    }
-    else if(count === 4){
-      $('#slider_btn').attr("href", "#visit");
-    }
-    else if(count === 5){
-      $('#slider_btn').attr("href", "#contact_us");
-    }
-    if(count > 1){
-      $('.main_slider_header').addClass('slider_text_right');
-      $('.main_slider_desc').addClass('slider_text_right');
-      $('.main_slider_btn').addClass('slider_text_right');
-    }
-    else{
-      $('.main_slider_header').removeClass('slider_text_right');
-      $('.main_slider_desc').removeClass('slider_text_right');
-      $('.main_slider_btn').removeClass('slider_text_right');
-    }
-  }
-  count++;
-  if(count >= 5){
-    count = 0;
-  }
-  timeout = setTimeout(function(){
-    $('.main_slider').animate({ opacity: 0 }, { duration: 800 });
-    skip = false;
-  }, 7000)
-}
-var interval = setInterval(transition, 8000);
-
-
 
   var test1 = "The office is very clean and pleasant. The dentists are great and Dr. Kazem is the BEST. I trust him 180%! The staff are great and I always feel welcome. They always have a nice smile in their beautiful faces!";
   var test1ar = ":أنجلينا ل.: المكان نظيف ويبعث بالسرور ، الأطباء رائعون والدكتور كاظم هو الأفضل . أنا اثق به بنسبة ١٨٠٪ !!! فريق العمل رائع واشعر دائماً بالترحيب! وهم دائماً مبتسمون";
